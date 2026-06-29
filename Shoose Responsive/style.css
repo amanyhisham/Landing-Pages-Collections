@@ -1,0 +1,332 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background: linear-gradient(#111,#222);
+    height: 100vh;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+      position: relative;
+
+ }
+ .container{
+    width:80%;
+    height:80%;
+    background:rgb(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+ }
+.container nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:auto;
+    padding:20px 0;
+    width:80%;
+}
+.container nav .logo{
+    text-decoration: none;
+    color:white;
+text-transform:uppercase;
+font-size: 25px;
+font-weight: 700px;
+letter-spacing: 1px;
+}
+.container nav ul li{
+    display:inline-block;
+    margin:6px;
+ }
+ .container nav ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-weight: 500px;
+ }
+ .container nav ul li a:hover{
+color:red;
+ }
+ body::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(211, 6, 6, 0.984);
+    height: 100%;
+    width: 100%;
+clip-path: circle(40% at right);
+z-index: -1;
+ }
+ .content{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:80%;
+    height:100%;
+     margin:auto;
+  }
+   .content .text{
+    color:white;
+    width:40%;
+   }
+     .content .text h2{
+        text-transform: uppercase;
+        font-weight: 700px;
+        letter-spacing: 2px;
+        font-size: 30px;
+       
+     }
+       .content .text p{
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height:1.4;
+        margin:20px 0;
+       }
+       .content  .img{
+        width:40%;
+       }
+       .content  .img img{
+        width:400px;
+       }
+ /* ====== Responsive Design ====== */
+
+/* للشاشات الكبيرة جداً */
+@media (min-width: 1441px) {
+  .content .text h2 {
+    font-size: 35px;
+  }
+  .content .text p {
+    font-size: 20px;
+  }
+  .content .img img {
+    width: 450px;
+  }
+}
+
+/* للشاشات المتوسطة الكبيرة (Laptops) */
+@media (max-width: 1200px) {
+  .container {
+    width: 85%;
+    height: 85%;
+  }
+  
+  .content .img img {
+    width: 350px;
+  }
+  
+  .content .text h2 {
+    font-size: 28px;
+  }
+  
+  .content .text p {
+    font-size: 17px;
+  }
+}
+
+/* للشاشات المتوسطة (Tablets Landscape) */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+    height: 85%;
+  }
+  
+  .container nav {
+    width: 85%;
+  }
+  
+  .content {
+    width: 85%;
+  }
+  
+  .content .img img {
+    width: 320px;
+  }
+  
+  .content .text {
+    width: 45%;
+  }
+  
+  .content .img {
+    width: 45%;
+  }
+}
+
+/* للشاشات الصغيرة المتوسطة */
+@media (max-width: 950px) {
+  .container {
+    width: 95%;
+    height: 90%;
+  }
+  
+  .container nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+  }
+  
+  .container nav .logo {
+    font-size: 22px;
+  }
+  
+  .container nav ul li {
+    margin: 3px;
+  }
+  
+  .container nav ul li a {
+    font-size: 16px;
+  }
+  
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .content .text,
+  .content .img {
+    width: 85%;
+  }
+  
+  .content .text h2 {
+    font-size: 26px;
+  }
+  
+  .content .text p {
+    font-size: 16px;
+  }
+
+  .content .img img {
+    width: 280px;
+  }
+
+  body::after {
+    clip-path: circle(50% at bottom);
+  }
+}
+
+/* للشاشات الصغيرة (Tablets Portrait & Mobile Landscape) */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    height: 95%;
+    border-radius: 15px;
+  }
+  
+  .container nav {
+    width: 90%;
+  }
+  
+  .container nav .logo {
+    font-size: 20px;
+  }
+  
+  .container nav ul li a {
+    font-size: 15px;
+  }
+  
+  .content {
+    width: 90%;
+  }
+  
+  .content .text,
+  .content .img {
+    width: 90%;
+  }
+  
+  .content .text h2 {
+    font-size: 24px;
+  }
+  
+  .content .text p {
+    font-size: 15px;
+    margin: 15px 0;
+  }
+  
+  .content .img img {
+    width: 240px;
+  }
+  
+  body::after {
+    clip-path: circle(55% at bottom);
+  }
+}
+
+/* للشاشات الصغيرة جداً (Mobile Portrait) */
+@media (max-width: 480px) {
+  .container {
+    width: 98%;
+    height: 98%;
+    border-radius: 10px;
+  }
+  
+  .container nav {
+    width: 95%;
+    padding: 10px 0;
+  }
+  
+  .container nav .logo {
+    font-size: 18px;
+  }
+  
+  .container nav ul li {
+    margin: 2px;
+  }
+  
+  .container nav ul li a {
+    font-size: 14px;
+  }
+  
+  .content {
+    width: 95%;
+    gap: 15px;
+  }
+  
+  .content .text,
+  .content .img {
+    width: 95%;
+  }
+  
+  .content .text h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+  
+  .content .text p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 12px 0;
+  }
+  
+  .content .img img {
+    width: 200px;
+  }
+  
+  body::after {
+    clip-path: circle(60% at bottom);
+  }
+}
+
+/* للشاشات الصغيرة جداً جداً */
+@media (max-width: 360px) {
+  .container nav .logo {
+    font-size: 16px;
+  }
+  
+  .container nav ul li a {
+    font-size: 13px;
+  }
+  
+  .content .text h2 {
+    font-size: 20px;
+  }
+  
+  .content .text p {
+    font-size: 13px;
+  }
+  
+  .content .img img {
+    width: 180px;
+  }
+}

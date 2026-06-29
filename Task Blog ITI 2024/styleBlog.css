@@ -1,0 +1,299 @@
+/*Baics_strucure*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+            font-size: 18px;
+    
+ }
+body{ 
+    font-family: 'Poppins', sans-serif;
+}
+ 
+/*Blogpage:heading*/
+.Blogpage{
+background: #FFFFFF;
+}
+.Blogpage .head{
+text-align: center;
+}
+.Blogpage .head .title{
+ color: #282938;
+}
+.Blogpage .head .title h2{
+padding-top:45px;;
+color:#282938;
+font-size: 48px;
+font-weight: 600;
+line-height: 55px;
+ margin-bottom: 25px; 
+  }
+.Blogpage .head .title p{
+font-size: 16px;
+margin-top: 0;
+color:#282938;
+font-weight: 100;
+ margin-bottom: 25px; 
+}
+.Blogpage .head .contant {
+    text-align: center;  
+}
+.Blogpage .head .contant img{
+width: 1280px;
+height: 477px;
+gap: 0px;
+display: block;
+margin: 0 auto; 
+ max-width: 100%; /* not avoid width*/
+    height: auto; /*  suitable with width  */
+    display: block;
+    margin: 0 auto;  
+    padding: 0 80px; /*add space*/
+ }
+.Blogpage .head .contant p{
+width: 100%;
+    max-width: 831px; 
+    position: static;  
+    left: auto;
+  font-family: 'Poppins', sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+text-align: center;
+color:#777;
+margin: 20px auto 0;  
+position: relative;  
+left: 40px;  
+}
+.Blogpage .head .contant a{
+font-size: 16px;
+text-align: center;
+color: #2405F2;
+text-decoration: none;
+padding-top: 30px;
+position: relative;  
+left: 33px;  
+}
+/*Blogpage:cards*/
+  .ourBlog {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+.Blogpage .ourBlog h2{
+position: relative;  
+left: 30px;
+color:#282938;
+text-align: center;
+font-size: 30px;
+font-weight: 600;
+padding-top: 70px;
+margin-bottom: 30px;
+}
+.ourBlog .top, .ourBlog .Bottom{
+    display:flex;
+     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+ }
+ 
+.ourBlog .top .Blog,
+.ourBlog .Bottom .Blog
+  {
+    background-color: #fff;
+     padding: 20px;
+    width: 31%;  /*3 par 1 row*/
+    text-align: left;
+ 
+}
+
+.ourBlog .Blog img  {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.ourBlog .Blog p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.ourBlog .Blog h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #282938;
+    margin-bottom: 13px;
+    line-height: 1.4;
+    text-align: left;
+
+}
+.ourBlog .Blog p:last-of-type {/*last paragraf*/
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.ourBlog a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1C1E53;
+    text-decoration: none;
+    margin-top: 10px;
+}
+/*responsive part*/
+/*1.small mobile*/
+@media (max-width: 480px) {
+    body {
+    overflow-x: hidden;
+    white-space: wrap;
+    word-break: break-all;
+}
+ body,html {
+    overflow-x: hidden;}
+    .Blogpage .head .title h2 {
+        font-size: 16px;
+         
+    }
+    .Blogpage .head .title p{
+        font-size:12px ;
+    }
+     .Blogpage .head .contant img {
+    width: 100%; 
+    height: auto;  
+ }
+  .Blogpage .head .contant p {
+    width: 100%;
+    position: relative;
+    font-size: 13px;
+     width: 100%;
+    position: relative;
+    font-size: 13px;
+      left: 0; /*avoid + text*/
+    padding-right: 0; /*delet +space*/
+    box-sizing: border-box; 
+    overflow-wrap: break-word; /*Break word to avoid scroll*/
+     
+}
+
+    .ourBlog .top .Blog, .ourBlog .Bottom .Blog {
+        width: 100%;  
+    }
+    
+ 
+
+}
+/*2.bigMobile^tablet*/
+@media (min-width: 481px) and (max-width: 767px) {
+   body{
+    text-align: center;
+     overflow-x: hidden;
+    white-space: wrap;
+    word-break: break-all;
+   }
+    .Blogpage .head .title h2 {
+        font-size:30px;
+        text-align: center;
+    }
+
+    .Blogpage .head .contant p {
+        font-size: 16px;
+         
+    }
+ .Blogpage .head .contant img {
+    width: 100%; 
+    height: auto;  
+ }
+    .ourBlog .top .Blog,
+    .ourBlog .Bottom .Blog {
+        width: 48%; /* 2 cards per row */
+    }
+     
+ .ourBlog .top .Blog,/*save Due services*/
+    .ourBlog .Bottom .Blog {
+        width: 100%;  
+        margin: 0;   }
+
+  
+ 
+ 
+
+}
+
+/* Tablets and small desktops (min-width: 768px to max-width: 1023px) */
+@media (min-width: 768px) and (max-width: 990px) {
+   body{
+    text-align: center;
+     overflow-x: hidden;
+    white-space: wrap;
+    word-break: break-all;
+   }
+   
+    .Blogpage .head .title h2 {
+        font-size: 34px;
+        text-align: center;
+    }
+ .Blogpage .head .title p{
+     font-size: 18px;
+ }
+  .Blogpage .head .contant img {
+    width: 100%; 
+    height: auto;  }
+
+    .Blogpage .head .contant p {
+        font-size: 15px;
+        left: 30px;
+        width:100%;
+          left: 0; /*avoid + text*/
+    padding-right: 0; /*delet +space*/
+    box-sizing: border-box; 
+    overflow-wrap: break-word; /*Break word to avoid scroll*/
+    }
+
+    .ourBlog .top .Blog,
+    .ourBlog .Bottom .Blog {
+        width: 48%; /* 2 cards per row */
+    }
+}
+
+/* Large desktops (min-width: 1024px) */
+@media (min-width: 991px) {
+     body{
+    text-align: center;
+     overflow-x: hidden;
+    white-space: wrap;
+    word-break: break-all;
+   }
+   
+    .Blogpage .head .title h2 {
+        font-size:48px;
+    }
+     .Blogpage .head .title p{
+        font-size: 18px;
+        
+     }
+.Blogpage .head .contant img {
+    width: 100%; 
+    height: auto;  }
+    .Blogpage .head .contant p {
+        font-size: 16px;
+        left: 40px;
+         left: 0; /*avoid + text*/
+    padding-right: 0; /*delet +space*/
+    box-sizing: border-box; 
+    overflow-wrap: break-word; /*Break word to avoid scroll*/
+    }
+
+    .ourBlog .top .Blog,
+    .ourBlog .Bottom .Blog {
+        width: 31%; /* 3 cards per row */
+    }
+}
