@@ -1,0 +1,1105 @@
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{/*type of font use*/
+      font-family: "Open Sans", sans-serif;
+      /*background-color:#1f2021;*/
+}
+ul{
+    list-style: none;/*make non under line*/
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;}
+  }
+/*end Global rules*/
+/*start header*/
+header{/*to not wrong on back ground*/
+
+      position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+header .container{/*this is for header element as all*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 80px;/*to keep in responsive*/
+}
+/*this is for line at end of header*/
+header .container::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width:100%;/*when -30px line none visble*/
+    background-color: #a2a2a2;
+    bottom: 0;
+    left:15px;
+}
+header .container .logo {
+height: 10px;
+ 
+margin:15px auto 25px;
+ 
+}
+header  nav{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+ header nav .menu{
+    color:white;
+      font-size: 22px;
+}
+/*to make this icon dis avialble in web but in mobile aviable*/
+@media (min-width: 768px) {
+  header nav .menu {
+    display: none; 
+  }
+  
+}
+ header nav ul{ 
+    display: flex;/*make links - - -*/
+}
+@media (max-width:767px) {
+    header nav ul {
+     display: none;
+    }
+    /*put on here as ul*/
+     header nav .menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+    
+}
+ /*put on here as ul*/
+     header nav .menu:hover + ul li a{
+        padding: 10px;
+     }
+}
+ header nav ul li a{
+    display: block;
+    color:white;
+    text-decoration: none;
+    padding: 40px 10px;
+    font-size: 14px;
+    transition: 0.3s;/*when make hover on icon*/
+     
+}
+/*step active*/
+header nav ul li a.active,
+header nav ul li a:hover{
+   color:rgb(0, 200, 255);
+   border-bottom: 3px solid rgb(0, 200, 255);
+}
+ header nav .search{
+    width: 30px;
+    height: 30px;
+    position: relative;
+      margin-left: 30px;
+  border-left: 2px solid white;
+}
+header nav .search i{
+    position: absolute;
+    font-size: 20px;
+     margin-left: 40px;
+     top: 50%;/*make in middle*/
+  transform: translateY(-50%);
+  color:white;
+    
+ }
+ 
+ /*end header ^ ^*/
+ /*start landing^ ^*/
+ .landing{
+    min-height: 100vh;
+  background-color: #1f2021;
+  background-image: url("../img/landing.jpg");
+  background-size: cover;
+  position: relative;
+ }
+  .landing .overlay{/*this to make mood black on screen*/
+      position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+ }
+ .landing .text{
+     position: absolute;/* as to parant bacg ground full*/
+  left: 0;
+  top: 50%;/*in middle screen*/
+  transform: translateY(-50%);
+  width: 50%;
+  padding: 50px;
+  color:white;
+  background-color: rgb(15 116 143 / 70%);
+  display:flex;
+  justify-content: flex-end;
+ }
+ @media (max-width: 767px) {
+   .landing .text{
+    width: 100%;
+   }
+}
+.landing .text .content{
+    max-width: 500px;/*to make text be at end of contant*/
+}
+ @media (max-width: 767px) {
+   .landing .text .content{
+    width: 100%;
+   }
+}
+.landing .text .content h2{
+    font-size: 30px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.landing .text .content p{
+    font-size: 15px;
+    line-height: 1.9;
+}
+.landing .change-background{
+    color:white;
+    position: absolute;
+    top:50%;/* center in screen*/
+     transform: translateY(-50%);
+}
+ @media (max-width: 767px) {
+    .landing .change-background{
+    display: none;
+   }
+}
+.landing  .fa-angle-left{
+    left:30px;
+}
+.landing .fa-angle-right{
+    right:30px;
+}
+.landing .bulltes{
+ position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  display: flex;
+}
+
+.landing .bulltes  span{
+   width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-left: 10px;
+ }
+ .landing .bulltes span.active{
+  background-color:rgba(33, 195, 239, 0.7);
+ }
+ /*end leading ^ ^*/
+ /*component will use in all pages
+ this like as --root when you use main-heading  or h2
+ this commpont will use in all header of pages
+ */
+ .main-heading {
+  text-align: center;
+}
+.main-heading h2 {
+  font-weight: normal;
+  font-size: 40px;
+  position: relative;
+  padding-top:80px;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+.main-heading h2::before{
+    content: "";
+    background-color:#777;
+    position:absolute;
+    width:120px;
+    height:2px;
+    bottom: -30px;/*what make line under header*/
+    left: 50%;/*what make line center as to header*/
+  transform: translateX(-50%);
+}
+.main-heading h2::after{
+    content: "";
+    position:absolute;
+    border: 2px solid #777;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    left: 50%;/*what make line center as to header*/
+    transform: translateX(-50%);
+    bottom: -38px;
+    background-color: white;/*to hide - that in back_ground*/
+}
+.main-heading p{
+    width:550px;
+      margin: 0 auto 100px;/*100px make space bottom in all pages*/
+     max-width: 100%;
+  line-height: 2;
+  color: #777;
+}
+/*end commponent*/
+/*serives*/
+ .serives{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+/*this to mak apper o o
+                    o o in website but im mobile  in next line*/
+@media (min-width: 768px) {
+  .serives .services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-column-gap: 40px;/* this make gap between | |*/
+    grid-row-gap: 60px;
+  }
+}
+.serives .srv-box{
+    display:flex;
+}
+.serives .srv-box i {
+  margin-right: 50px;
+}
+@media (max-width: 767px) {
+  .serives .srv-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .serives .srv-box i{
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.serives .srv-box h3{
+    margin-bottom: 30px;
+  color:rgba(33, 195, 239, 0.7);;
+}
+.serives .srv-box p{
+  line-height: 2;
+  color: #777;
+}
+/*design mobile page*/
+.design{
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image:url(../img/feature.png);
+    background-size:cover;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+}
+.design .overlay{
+    content: "";
+     position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+.design .img_mobile,
+.design .text{
+    z-index: 2px;
+    position: relative;
+    flex:1px;
+}
+
+.design .img_mobile{
+    text-align: center;
+}
+ @media (max-width: 767px) {
+   .design .img_mobile{
+    display:none;
+   }
+}
+.design .img_mobile img{
+    position: relative;
+  bottom: -150px;
+}
+.design .text{ 
+  /*make text have screen on it */
+  padding: 50px;
+  color:white;
+  background-color: rgb(15 116 143 / 70%);
+  
+}
+ @media (max-width: 767px) {
+   .design .text{
+    font-size: 14px;
+   }
+}
+.design .text h2{
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.design .text ul li{
+    padding: 15px 0;/*put 0 make no defult*/
+}
+.design .text ul li::before{
+  font-family: "Font Awesome 5 Free";
+  content: "\f108";
+  margin-right: 20px;
+    font-weight: 900;/* to take more size*/
+    position: relative;/* to make sure that icon // text*/
+  top: 1px;
+}
+/*proyiflio*/
+.portfolio{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+/* this to make content O O O O */
+.portfolio .shuffle
+{
+    display: flex;
+  justify-content: center;
+}
+.portfolio .shuffle li {
+    padding: 10px;
+}
+.portfolio .shuffle li.active{
+   background-color:rgba(33, 195, 239, 0.7);
+   color:white;
+   
+}
+.portfolio .contiuer_img{
+    display: flex;
+    flex-wrap: wrap;/* as if there is any content be in next line*/
+    margin-top: 60px;
+}
+.portfolio .contiuer_img .box{
+    position: relative;
+    overflow: hidden;
+}
+@media (min-width: 768px) {
+    .portfolio .contiuer_img .box{
+            flex-basis: 50%;
+    }
+}
+@media (min-width: 1199px) {
+    .portfolio .contiuer_img .box{
+            flex-basis: 25%;
+    }
+}
+.portfolio .contiuer_img .box img{/* photo not out about contact page*/
+    max-width: 100%;
+      transition: 0.3s;
+
+}
+.portfolio .contiuer_img .box .caption{
+  position: absolute;
+   left:0;
+   padding:20px;
+   background-color: white;
+   width:100%;
+   transition:0.3s;
+   bottom: -100%;
+}
+.portfolio .contiuer_img .box:hover .caption
+  {
+  bottom: 0;
+}
+.portfolio .contiuer_img .box:hover img{
+    transform: rotate(3deg) scale(1.1);
+
+}
+.portfolio .more{
+  text-decoration: none;/*hide line of kink*/
+  background-color: rgba(33, 195, 239, 0.7);
+  color:white;
+  text-transform: uppercase;
+  padding:15px 20px;
+  margin: 30px auto;
+    width: fit-content;
+    display: block;/*center in page*/
+}
+/*start video*/
+.video{
+  position: relative;
+}
+.video video{
+  width: 100%;/*save sapace of page */
+}
+.video::before{/*make back ground black*/
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width:100%;
+  background-color: rgb(0 0 0 / 40%);
+
+}
+.video .text{
+  position:absolute;
+  top:50%;
+  padding:50px;
+  background-color: rgb(15 116 143 / 70%);
+   width: 100%;/* to make rgb take all space in page*/
+   text-align: center;
+   color:white;
+   transform: translateY(-50%);/* make in center Y TO MAKE TOP TRUE*/
+}
+.video .text h2{
+font-weight: normal;
+margin:0 0 30px;
+text-transform: uppercase;/*make words upper*/
+}
+.video .text p{
+  font-weight: normal;
+  margin:0 0 30px;
+}
+.video .text button{
+  background-color: black;
+  color:white;
+  padding: 20px 10px;
+  text-transform: uppercase;
+    border: none;/* hide line about button*/
+}
+/*about*/
+.About{
+  padding-top: 100px;
+  text-align: center;
+  overflow: hidden;/*hide part of photo*/
+}
+.About img{
+  margin-bottom: -120px;
+  max-width: 100%;/* to save contant of page*/
+}
+@media(max-width: 767px){
+  .About img{
+  margin-bottom: -60px;
+  }
+}
+/*static*/
+ .statics
+{
+  padding-top: 100px;
+  padding-bottom: 100px;
+background-image:url(../img/stats.png);
+background-size: cover;
+text-align: center;
+position: relative;
+
+}
+.statics::before
+{
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+   
+}
+.statics .container {
+position: relative;
+display:flex;
+flex-wrap: wrap;
+ 
+}
+.statics .container  .box{
+  color:white;
+  padding: 50px;
+  background-color:  rgb(15 116 143 / 70%);;
+}
+@media (max-width: 767px) {/*mobile */
+  .statics .container  .box{
+     flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {/*tabelt */
+  .statics .container  .box{
+     flex-basis: 50%;
+  }
+}
+@media (min-width: 992px) {/*web screen*/
+  .statics .container  .box{
+     flex-basis: 25%;
+  }
+}
+.statics .container  .box i{
+background-color: black;
+ height: 40px;
+ width: 40px;
+ display: flex;
+ border-radius:50%;
+  justify-content: center;
+  align-items: center;
+   margin: 0 auto 25px;
+}
+.statics .container  .box .number{
+font-size: 40px;
+font-weight: bold;
+/*make sapce*/
+margin: 0 auto 20px;
+}
+.statics .container  .box p{
+  font-size:14px;
+  font-style:normal;
+}
+/*our skill*/
+.our_skill{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.our_skill .container{
+    display:flex;
+  text-wrap:wrap;
+  justify-content: space-between;
+}
+ @media (max-width: 767px) {
+  .our_skill .container{
+    display: block;
+    text-align: center;
+  }
+}
+ 
+@media (min-width: 992px) {
+  .our_skill .container > div{
+    flex-basis: 45%;
+    
+  }
+}
+.our_skill .container > div > h4
+{
+  text-align: center;
+  margin:0 auto 30px;
+  text-transform:uppercase;
+   font-weight: normal;
+   font-size: 20px;
+}
+.our_skill .container > div > p
+{
+  text-align: center;
+  margin:0 auto 30px;
+   font-weight: normal;
+    line-height: 2;
+    color:#777
+}
+.our_skill .Testimonials .box{
+  display: flex;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+ @media (max-width: 767px) {
+  .our_skill .Testimonials .box
+  {
+     flex-direction: column;
+     text-align: center;
+  }
+}
+.our_skill .container .Testimonials .box img{
+width: 100px;
+height: 100px;
+border-radius:50%;
+text-align: center;
+margin: 0 20px 50px;
+}
+@media (max-width: 767px){
+  .our_skill .container .Testimonials .box img{
+     margin-left: 80px;
+}
+}
+.our_skill .container .Testimonials .box .text{
+  line-height: 1.8;
+  border-bottom: 1px solid #ccc;
+text-align: left;
+}
+.our_skill .container .Testimonials .box .text p{
+  text-align: right;
+  color:#777;
+  font-size: 15px;
+margin-bottom: 0px;
+padding-bottom: 0px;
+}
+/*make O O O*/
+.our_skill .container .Testimonials .bullets{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.our_skill .container .Testimonials .bullets li{
+  width: 14px;
+  height: 14px;
+   border-radius: 50%;
+  border: 1px solid #aaa;/*what make it appear*/
+  margin-right: 10px;
+}
+.our_skill .container .Testimonials .bullets li.active{
+  background-color:#19c8fa;
+  border: none;
+}
+.our_skill .container .Skills .holder{
+  margin-bottom: 40px;
+}
+.our_skill .container .Skills .holder h3{
+    font-weight: normal;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 15px;
+
+}
+.our_skill .container .Skills .holder .prog{/*class big*/
+  background-color: #dedadc;
+  height: 30px;
+}
+.our_skill .container .Skills .holder .prog span{/*class small with color*/
+   background-color: #19c8fa;
+   display: block;
+   height: 100%;
+   position: relative;
+}
+.our_skill .container .Skills .holder .prog span::before{
+  content: attr(data-progress);
+  position: absolute;
+  background-color: black;
+  color:white;
+  top:-40px;
+   width: 40px;
+   text-align: center;
+   border-radius: 5px;
+   padding: 5px 0;
+   right: -18px;
+}
+/*how make Tringle*/
+.our_skill .container .Skills .holder .prog span::after{
+  content: "";
+  position: absolute;
+   border-style: solid;
+   border-color: black transparent transparent ;
+     border-width: 8px;
+     right: -9px;
+     top:-13px;
+}
+/*start QUote*/
+.Quote{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image:url(../img/quote.jpg);
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.Quote::before{
+ content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 75%);
+}
+.quote .container {
+  position: relative;
+}
+.Quote q{
+   font-size: 30px;
+  margin-bottom: 20px;
+  text-wrap: wrap;
+  display: block;
+  position: absolute;
+  z-index: 2;
+
+}
+ .Quote span{
+    position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  text-align: center;
+ }
+  @media (max-width: 767px){
+    .Quote q{
+      font-size: 17px;
+    }
+    .Quote span{
+      font-size: 13px;
+    }
+    .quote{
+      width:100%;
+    }
+  }
+ /*section pricing*/
+ .Pricing{
+  padding-top: 100px;
+  padding-bottom: 100px;
+ }
+  .Pricing .container .plans{
+  display: flex;
+  justify-content:space-between;
+}
+@media (max-width: 768px) {
+  .Pricing .container .plans {
+    flex-direction: column; /* ترتيب العناصر في عمود */
+    align-items: center; /* محاذاة العناصر إلى الوسط */
+  }
+  .Pricing .container .plans > div {
+    width: 100%; /* عرض كل عنصر بالكامل */
+    margin-bottom: 20px; /* مسافة بين العناصر */
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .Pricing .container .plans {
+    flex-direction: row; /* ترتيب العناصر أفقيًا */
+    flex-wrap: wrap; /* السماح بالالتفاف */
+    justify-content: space-around; /* توزيع العناصر بالتساوي */
+  }
+
+  .Pricing .container .plans > .plan {
+    width: 48%; /* عرض كل عنصر بنسبة 48% ليتسع عنصران في الصف الواحد */
+    margin-bottom: 20px; /* مسافة بين الصفوف */
+  }
+}
+.Pricing .container .plans .plan {
+text-align: center;
+}
+.Pricing .container .plans .plan .heading{
+   padding: 20px 40px;
+   border-top:1px solid #19c8fa;
+   border-bottom:1px solid #19c8fa;
+}
+.Pricing .container .plans .plan .heading p{
+   text-transform: uppercase;
+   font-size: 18px;
+   margin-bottom: 20px;
+    font-weight: normal;
+}
+.Pricing .container .plans .plan .heading span{
+    font-weight: bold;
+    font-size: 60px;
+    
+}
+.Pricing .container .plans .plan .heading span::before{
+  content: "$";
+  position: relative;
+  font-size: 20px;
+  top: -40px;
+  right: 12px;
+  font-weight: normal;
+  
+}
+.Pricing .container .plans .plan .heading span::after{
+  content:"/Mo";
+  font-size: 15px;
+  position:relative;
+  right:-15px;
+}
+.Pricing .container .plans .plan ul{
+border-bottom: 1px solid #19c8fa;
+}
+.Pricing .container .plans .plan ul li{
+ padding: 20px;
+position: relative;
+}
+.Pricing .container .plans .plan ul li:not(:last-child)::after{
+content: "";
+position: absolute;
+height:  1px;
+ background-color: #19c8fa;
+ width:130px;
+ bottom: 0;
+right: 40px;
+}
+@media (max-width: 767px) {
+  .Pricing .container .plans .plan ul li:not(:last-child)::after{
+    content: "";
+position: absolute;
+    margin:0 90px 0 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .Pricing .container .plans .plan ul li:not(:last-child)::after {
+    right: 20px; /* تقليل المسافة من اليمين لتتناسب مع حجم الشاشة */
+    width: 100%; /* جعل الخط بعرض العنصر li */
+    width: fit-content;
+  }
+}
+.Pricing .container  .plans .plan .end a{
+  text-decoration: none;
+  padding:20px 20px;
+  display: block;
+  border: 1px solid #19c8fa;
+   width: fit-content;
+  margin: 50px 30px;
+}
+@media (max-width: 768px) {
+  .Pricing .container  .plans .plan .end a{
+     margin: 20px auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .Pricing .container .plans .plan .end a {
+    margin: 50px auto; /* جعل الهامش أفقيًا تلقائيًا لتوسيط العنصر */
+    text-align: center; /* محاذاة النص (أو الأيقونة) إلى الوسط */
+  }
+}
+.Pricing .container  .text{
+  text-align: center;
+  font-size: 20px;
+  margin: 0 auto 30px;
+}
+.Pricing .container  .link_end a{
+  text-decoration: none;
+  display: block;
+  border: 1px solid #19c8fa;
+  width: fit-content;
+   margin: 20px auto;
+   background-color: #19c8fa;
+   padding: 15px 30px;
+   color:white;
+}
+/*section subscribe*/
+.subscribe{
+  padding-top: 100px;
+  padding-bottom: 100px;
+   background-image:url(../img/subscribe.jpg);
+  background-size:cover;
+  position: relative;
+  color:white;
+}
+.subscribe::before{
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 40%);
+
+}
+.subscribe .container{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 991px){
+  .subscribe .container{
+    flex-direction: column;
+  }
+}
+.subscribe .container form{
+  /* max-width: 100%;*/
+ /* width:500px;*/
+  display: flex;
+position: relative;
+}
+.subscribe .container form i{
+position:absolute ;
+bottom:50px;
+top:30px;
+left:25px;
+}
+.subscribe .container form input[type="email"]{
+ border: 1px solid white;
+ padding: 20px 20px 20px 60px;
+ background: none;
+ border-right: none;
+}
+.subscribe .container form input[type="submit"]{
+  padding: 20px 30px;
+   border: 1px solid white;
+  background-color: #19c8fa;
+  border-left: none;
+  color:white;
+  text-transform: uppercase;
+}
+.subscribe form ::placeholder {
+  color: white;
+}
+.subscribe .container p{
+ line-height: 2;
+  margin-left: 50px;
+}
+  @media(max-width:767){
+    .subscribe .container form{
+       flex-wrap: wrap;
+       flex-basis: 50%;
+      }
+     .subscribe .container form input[type="submit"]{
+      padding: 10px 15px;
+    }
+    .subscribe .container form input[type="email"]{
+      padding: 10px 15px;
+
+  }
+  }
+  /*section contact us*/
+  .contact_us{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .contact_us .container .contact{
+   display: flex;
+   justify-content: space-between;
+  }
+  @media(max-width:767px){
+  .contact_us .container .contact {
+    flex-direction: column;
+  }}
+
+   .contact_us  .contact form {
+    flex-basis: 70%;
+   }
+    .contact_us  .contact form .main-input {/*special 3 icon*/
+    display: block;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #ccc;
+   }
+   .contact_us  .contact form .main-input:focus{
+    outline: none;
+   }
+    .contact_us .container .contact form  textarea.main-input{
+    height:200px;
+    }
+    .contact_us .container .contact form  input[type="submit"]{
+    background-color: #19c8fa;
+    color:white;
+    border:none;
+    padding: 20px ;
+    text-transform: uppercase;
+    /*this 2 step make at left */
+    display: flex;
+    margin-left: auto;
+    }
+    .contact_us .container .contact .info{
+     flex-basis: 25%;
+    }
+    @media(max-width:767px){
+          .contact_us .container .contact .info{
+            order:-1;
+            text-align: center;
+          }
+    }
+    .contact_us .container .contact .info h4{
+      margin-bottom: 30px;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    .contact_us .container .contact .info h4:nth-of-type(2){
+      margin-top: 100px;
+    }
+    @media(max-width:767px){
+          .contact_us .container .contact .info h4:nth-of-type(2){
+             margin-top: 50px;
+          }
+          .contact_us .container .contact .info h4:nth-of-type(1){
+             margin-top: 10px;
+          }
+    }
+    .contact_us .container .contact .info .number{
+      display: block;
+      margin-bottom: 10px;
+      color:#777
+    }
+    .contact_us .container .contact .info address{
+      line-height: 2;
+      color:#777
+    }
+    @media(max-width:767px){
+          .contact_us .container .contact .info address{
+            margin-bottom: 40px;
+          }
+    }
+/*footer*/
+.foot{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image:url(../img/subscribe.jpg);
+  background-size: cover;
+  color:white;
+  position: relative;
+  text-align: center;
+}
+.foot::before{
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+.foot .container{
+    position: relative;
+
+}
+.foot img{
+  padding-bottom: 20px;
+  margin:5px auto;
+  position: relative;
+   z-index: 2;
+}
+.foot p:not(.two_p){
+  text-transform: uppercase;
+  font-size: 20px;
+   padding: 10px 20px;
+   margin: 20px auto;
+   border-bottom: 1px solid white;
+   width:fit-content;
+   position: relative;
+   z-index: 2;
+}
+.foot .icon i{
+padding:10px;
+position: relative;
+   z-index: 2;
+}
+.foot .two_p{
+  position: relative;
+   z-index: 2;
+   margin-top: 60px
+  
+}
+.foot .two_p span{
+  color:#19c8fa;
+  font-weight: bold;
+}

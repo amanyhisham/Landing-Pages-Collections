@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@300;400;500;700&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color: #F4F4F4;
+}
+ .container-profile {
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;       
+    max-width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* محاذاة عمودية */
+    align-items: center;     /* محاذاة أفقية */
+    padding: 20px;
+    text-align: center;      /* للنصوص داخل الكارد */
+    position: relative;
+}
+ .container-profile::after{
+    content: ""; 
+     position: absolute; 
+    width: 100%;
+    height: 36%;
+    background-color: #4070F4;
+    top:0px;
+    left:0px;
+    border-radius:  24px 24px 0 0;
+     z-index: -1;
+  }
+
+.container-profile .img {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 4px solid #FFF;
+    display: flex;
+    justify-content: center; /* محاذاة الصورة داخل الدائرة */
+    align-items: center;     /* محاذاة الصورة داخل الدائرة */
+    overflow: hidden;        /* عشان الصورة تتقيد داخل الدائرة */
+}
+ 
+ 
+
+.container-profile .img .profile-img {
+    height: 100%; /* خليها تاخد مساحة العنصر الأب */
+    width: 100%;  /* خليها تاخد مساحة العنصر الأب */
+    object-fit: cover; /* عشان الصورة تملي الدائرة بدون تشويه */
+    border-radius: 50%;
+     
+}
+.container-profile .text{
+    display: flex;
+    flex-direction: column;
+}
+.container-profile .text span{
+    padding: 3px 0;
+}
+.container-profile .text .name{
+    font-size: 22px;
+    font-weight: 500;
+
+}
+.container-profile .text .work{
+    font-size: 16px;
+    font-weight: 400;
+}
+.social-icons {
+    display: flex;
+    gap: 15px;  
+    justify-content: center;  
+    align-items: center;   
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    color:white;
+    
+    height:35px;
+    width:35px;
+    border-radius: 50%;
+     
+    display: flex;               
+    justify-content: center;    
+    align-items: center;        
+    font-size: 14px;  
+    transition: 0.3s all ease;
+}
+.social-icons a:nth-child(1) { background-color: #4267b2; } /* فيسبوك أزرق */
+.social-icons a:nth-child(2) { background-color: #1da1F2; } /* إنستجرام وردي/أحمر */
+.social-icons a:nth-child(3) { background-color: #e1406c; } /* تويتر أزرق فاتح */
+.social-icons a:nth-child(4) { background-color: #FF0000; } /* يوتيوب أحمر */
+
+.social-icons a:hover{
+    transform: scale(1.4);
+}
+.bttun{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    margin-top: 14px;
+}
+.bttun button[type="button"] {
+    background-color: #4070F4;
+    color: #fff;  
+    border: none;  
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin:0 10px;
+    padding:8px 24px;
+    font-size: 14px;
+    font-weight: 400;
+     cursor: pointer;  
+     transition: 0.3s all ease;
+    
+}
+.bttun button[type="button"]:hover{
+     background-color: #0e4bF1; 
+}
+.analyse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+.analyse .data{
+    border-right: 2px solid #e7e7e7;
+    display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 0 20px;
+   gap:3px;
+}
+.analyse .data i{
+    color:#999;
+        font-size: 16px;
+
+}
+
+.analyse .data:last-child{
+    border-right: none;
+}
+
+
+
+/* للشاشات الصغيرة جداً (أقل من 400px) */
+@media screen and (max-width: 400px) {
+    .container-profile {
+        width: 100%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+    
+    .container-profile .img {
+        height: 140px;
+        width: 140px;
+    }
+    
+    .container-profile .text .name {
+        font-size: 20px;
+    }
+    
+    .container-profile .text .work {
+        font-size: 14px;
+    }
+    
+    .social-icons a {
+        height: 32px;
+        width: 32px;
+        font-size: 13px;
+    }
+    
+    .bttun button[type="button"] {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+    
+    .analyse .data {
+        padding: 0 12px;
+        font-size: 14px;
+    }
+}
+
+/* للشاشات المتوسطة (من 400px إلى 768px) */
+@media screen and (min-width: 400px) and (max-width: 768px) {
+    .container-profile {
+        width: 90%;
+    }
+}
+
+/* للأجهزة اللوحية والشاشات الأكبر */
+@media screen and (min-width: 768px) {
+    .container-profile {
+        width: 400px;
+    }
+    
+    .container-profile .img {
+        height: 190px;
+        width: 190px;
+    }
+    
+    .container-profile .text .name {
+        font-size: 24px;
+    }
+}
+
+/* للشاشات الكبيرة */
+@media screen and (min-width: 1200px) {
+    .container-profile:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+    }
+}
+
+ 
+
+ 
+

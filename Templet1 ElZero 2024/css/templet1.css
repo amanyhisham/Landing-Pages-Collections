@@ -1,0 +1,534 @@
+/* Global Styles */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #10cab7;
+}
+
+/* Font family */
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Container */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Start Header */
+.header {
+  padding: 20px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header .link {
+  position: relative;
+}
+
+/* Organize shape */
+.header .link .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  cursor: pointer; /*1 Add cursor pointer for better UX */
+}
+
+.header .logo {
+  width: 60px;
+}
+
+/* Shape logo */
+.header .link .icon span {
+  display: block; /* 2 Ensure spans are block elements */
+  background-color: black;
+  margin-bottom: 5px;
+  height: 2px;
+}
+
+.header .link .icon span:first-child {
+  width: 100%;
+}
+
+.header .link .icon span:nth-child(2) {
+  width: 60%;
+}
+
+.header .link .icon span:last-child {
+  width: 100%;
+}
+
+/* Organize links in logo */
+.header .link ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none; /*hide menue*/
+  z-index: 1; /*apper menu in photo*/
+}
+
+/* Shape of triangle in design */
+.header .link ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+
+.header .link:hover ul {
+  /* Show menu when you hover over button */
+  display: block;
+}
+
+/* Organize shape of link */
+.header .link ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none; /* Remove underline from link */
+  color: black; /* Color for link */
+  transition: 0.3s; /* Make smooth transition on hover */
+}
+
+.header .link ul li a:hover {
+  padding-left: 15px;
+}
+
+/* Add border between links in logo */
+.header .link ul li:not(:last-child) a {
+  /* No border for the last link */
+  border-bottom: 2px solid #aaa;
+}
+
+/* End header */
+html{
+  scroll-behavior: smooth;
+}
+/* Landing */
+.landing {
+  background-image: url(../img/Screenshot\ 2024-07-28\ 065230.png);
+  background-size: cover;
+  height: calc(100vh - 88.83px);
+  position: relative;
+}
+
+.landing .title-landing {
+  /* Center text and paragraph */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+   
+}
+.landing .title-landing h1 {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+  color:#10cab7;
+}
+.landing .title-landing p {
+  font-size: 26px;
+  line-height: 1.8;
+  font:bold;
+}
+/* End landing */
+/* Start Features */
+.feature {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f8f8f8f9;
+}
+.feature .continure {
+  width: 90%;
+  margin: auto;
+}
+.feature .feat {
+  padding:20px;
+  text-align: center;
+  width: 33%;
+  float: left;
+}
+.clr {
+  clear: both;
+}
+.feature .feat i {
+  color: #10cab7;
+}
+.feature.feat h3 {
+  font-weight: 800;
+  margin: 30px 0;
+}
+.feature.feat p {
+  line-height: 1.9;
+  color: #777;
+  font-size: 17px;
+
+}
+/*section services^^*/
+/*1.specail_heading i will design it*/
+.special_heading{/*mean head h3*/
+  font-size:100px;
+  margin:0%;
+  text-align:center;
+  color:#9b9b9b;
+  font-weight:900;
+  letter-spacing:-2px;
+}
+/*to deal with next pargaph noy mistake with all*/
+.special_heading + p{
+  margin:-7px 0 0;
+  font-size:20px;
+  text-align:center;
+  margin:-27px;
+}
+/* to avoid mistake in mobile run*/
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+}
+.servise{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+
+}
+
+.servise .services-contant{
+  display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   grid-gap: 60px;
+   margin-top:100px;
+}
+.servise .services-contant .srv{
+  display: flex;
+  margin-bottom: 40px;
+}
+/*avoid problem when run on mobile*/
+@media (max-width: 767px) {
+  .servise .services-contant .srv {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+ .servise .services-contant .srv i{
+  color: #10cab7;
+  flex-basis: 60px;
+ }
+ .servise .services-contant .srv .text{
+  flex:1;/*to make soace between header ^ icon*/
+ }
+ .servise .services-contant .srv .text h3{
+    margin: 0 0 20px;/* in same first of icon and text*/
+ }
+  .servise .services-contant .srv .text p{
+    color: #777;
+      line-height:1.8;
+  }
+  /*deal with photo*/
+  .servise .services-contant .img_services{
+    text-align:center;
+    position: relative;/*set line*/
+  }
+   .servise .services-contant .img_services img{
+    width:260px;/*change width of photo*/
+   }
+   .servise .services-contant .img_services::before{
+    content: "";
+    background-color:#2c4755;
+    width:100px;
+      height: calc(100% + 100px);
+    position: absolute;
+    right:0;
+    top:-50px;
+    z-index: -1;
+     }
+     @media (max-width: 1199px) {
+  .image-column {
+    display: none;
+  }
+}
+/*end services*/
+/*portfoli*/
+.Portfolio {
+  color: #777;
+  padding-top: 60px;
+  padding-bottom: 60px;
+    background-color: #f8f8f8f9;
+}
+
+.head_Portfolio {
+  /* mean head h3 */
+  font-size: 100px;
+  margin: 0;
+  text-align: center;
+  color: #9b9b9b;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.head_Portfolio + p {
+  margin: -10px 0 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.Portfolio .portfolio_contant {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;  
+  margin-top: 80px;
+  margin-left: 120px;  
+}
+
+.Portfolio .portfolio_contant .crid {
+  background-color: white;
+}
+
+.Portfolio .portfolio_contant .crid img {
+  max-width: 100%;
+}
+
+.Portfolio .portfolio_contant .crid .info {
+  padding: 20px;
+}
+
+.Portfolio .portfolio_contant .crid .info h3 {
+  margin: 0;
+}
+
+.Portfolio .portfolio_contant .crid .info p {
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+/*about*/
+.about {
+  color: #777;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.special-heading{
+  /* mean head h3 */
+  font-size: 100px;
+  margin: 0;
+  text-align: center;
+  color: #9b9b9b;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+.special-heading + p {
+  margin: -7px 0 0;
+  font-size: 20px;
+  text-align: center;
+}
+  
+.about .about-content {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.about .about-content .image {
+  position: relative;
+  width: 250px;
+  height: 375px;
+}
+@media (max-width: 991px) {
+  .about .about-content .image {
+    margin: 0 auto 60px;
+  }
+}
+.about .about-content .image::before {
+  content: "";
+  position: absolute;
+  background-color: #ebeced;
+  width: 100px;
+  height: calc(100% + 80px);
+  top: -40px;
+  left: -20px;
+  z-index: -1;
+}
+.about .about-content .image::after {
+  top: -40px;
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 300px;
+  border-left: 80px solid var(--main-color);
+  border-bottom: 80px solid var(--main-color);
+  z-index: -1;right: -150px;
+}
+@media (max-width: 991px) {
+  .about .about-content .image::before,
+  .about .about-content .image::after {
+    display: none;
+  }
+}
+.about .about-content .image img {
+  max-width: 100%;
+}
+.about .about-content .text {
+  /*flex-basis: calc(100% - 500px);*/
+  flex:1;
+  padding-left: 300px;
+
+}
+.about .about-content .text p:first-of-type {/*first p*/
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+.about .about-content .text hr { width: 50%;
+  display: inline-block;
+  border-color:#10cab7;
+}
+.about .about-content .text p:last-of-type {
+  line-height: 2;
+  color: #777;
+}
+/* End About */
+/*contact section*/
+.contact{
+color: #777;
+    background-color: #f8f8f8f9;;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.head-contact{
+  /* mean head h3 */
+  font-size: 100px;
+  margin: 0;
+  text-align: center;
+  color: #9b9b9b;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+.head-contact + p {
+  margin: -10px 0 0;
+  font-size: 20px;
+  text-align: center;
+}
+.contact .info{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.contact .info .text-contact{
+ color: #2c4755;
+  letter-spacing: -2px;
+  font-size:35px;
+  font-weight:900px;
+    margin-bottom: 15px;}
+ 
+  .contact .info .link{
+    text-decoration: none;
+    color:#10cab7;
+    font-size: 30px;
+    font-weight: 800px;
+    display: block;
+  }
+  .contact .info .social{
+    display: flex;
+   justify-content: center;
+  margin-top: 20px;
+  font-size: 16px;
+  }
+  .contact .info .social i{
+    margin-left: 10px;
+    color:#2c4755
+  }
+
+  /*make resposive*/
+ /*make resposive*/
+  /*  mobile   */
+@media (max-width: 767px) {
+  .landing .title-landing h1 {
+    font-size: 30px;
+  }
+  .landing .title-landing p {
+    font-size: 16px;
+  }
+  .feature .feat {
+    width: 100%;
+    float: none;
+  }
+  .Portfolio .portfolio_contant {
+    margin-left: 0;
+  }
+  .about .about-content .text {
+    padding-left: 0;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .feature .feat {
+    width: 50%;
+  }
+}
+
+/* widescreen*/
+@media (min-width: 1200px) {
+  .landing .title-landing h1 {
+    font-size: 60px;
+  }
+}
+.footer {
+  background-color:#2c4755;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.footer span {
+  font-weight: bold;
+  color:#10cab7;
+}
+

@@ -1,0 +1,255 @@
+/* ========== Global Styles ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(30deg, #64f154, #5c5ce5, #6f1e1e);
+  background-size: 200% 200%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* ========== حركة التدرج ========== */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ========== أشكال هندسية متحركة ========== */
+body::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(45deg, rgba(100, 241, 84, 0.15), transparent);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  top: -100px;
+  left: -100px;
+  animation: morph 20s ease-in-out infinite, float 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(92, 92, 229, 0.15), transparent);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  bottom: -100px;
+  right: -100px;
+  animation: morph 25s ease-in-out infinite reverse, float 10s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  25% {
+    border-radius: 60% 40% 30% 70% / 50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 30% 60% 40%;
+  }
+  75% {
+    border-radius: 60% 30% 40% 70% / 60% 50% 40% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(50px, -50px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-30px, 30px) rotate(240deg);
+  }
+}
+
+/* ========== Container ========== */
+.img_container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  transition: all 0.5s ease;
+  z-index: 1;
+  position: relative;
+}
+
+/* ========== Image Cards ========== */
+.img_card {
+  width: 200px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: center;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+/* لمعة خفيفة على الكارت */
+.img_card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+  z-index: 2;
+}
+
+.img_card:hover::before {
+  left: 100%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(30%) brightness(0.85) contrast(0.9);
+  transition: all 0.6s ease;
+  border-radius: 15px;
+}
+
+/* ========== Hover Effects - الصور المربعة ========== */
+.img_container:hover .img {
+  filter: saturate(15%) brightness(0.5) grayscale(0.4) blur(2px);
+  transform: scale(0.92);
+  opacity: 0.6;
+}
+
+.img_container:hover .img_card {
+  transform: scale(0.85) translateX(0);
+  opacity: 0.7;
+}
+
+/* الصور اللي على اليمين تروح يمين شوية */
+.img_container:hover .img_card:nth-child(n+5) {
+  transform: scale(0.85) translateX(15px);
+}
+
+/* الصور اللي على الشمال تروح شمال شوية */
+.img_container:hover .img_card:nth-child(-n+3) {
+  transform: scale(0.85) translateX(-15px);
+}
+
+/* ========== الصورة المختارة ========== */
+.img_container:hover .img_card:hover {
+  transform: scale(1.2) translateY(-20px) !important;
+  z-index: 10;
+  opacity: 1;
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(100, 241, 84, 0.3),
+    0 0 0 2px rgba(255, 255, 255, 0.2);
+  animation: cardPulse 2s ease-in-out infinite;
+}
+
+.img_container:hover .img_card:hover .img {
+  filter: saturate(130%) brightness(1.1) contrast(1.15) blur(0);
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* نبضة خفيفة للصورة المختارة */
+@keyframes cardPulse {
+  0%, 100% {
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.5),
+      0 0 40px rgba(100, 241, 84, 0.3),
+      0 0 0 2px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.5),
+      0 0 50px rgba(92, 92, 229, 0.4),
+      0 0 0 2px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* ========== تأثير Ripple عند الضغط ========== */
+.img_card:active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 1400px) {
+  .img_container {
+    gap: 18px;
+  }
+  .img_card {
+    width: 180px;
+    height: 270px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .img_container {
+    gap: 15px;
+    padding: 20px;
+  }
+  .img_card {
+    width: 160px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .img_container {
+    gap: 12px;
+    padding: 15px;
+  }
+  .img_card {
+    width: 130px;
+    height: 200px;
+  }
+  .img_container:hover .img_card:hover {
+    transform: scale(1.15) translateY(-15px) !important;
+  }
+}
