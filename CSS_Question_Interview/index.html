@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Interview Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="icon">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                    <rect width="50" height="50" rx="10" fill="#6366f1"/>
+                    <path d="M15 20h20M15 25h20M15 30h20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h1>CSS Interview Guide</h1>
+            <p class="subtitle">Complete reference for CSS interview questions</p>
+        </header>
+
+        <main class="content">
+            <!-- Box Model Section -->
+            <section class="topic-section" data-topic="box-model">
+                <div class="topic-header">
+                    <div class="topic-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        </svg>
+                    </div>
+                    <h2>Box Model <span class="question-count">(8 questions)</span></h2>
+                    <button class="toggle-btn">
+                        <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="questions-container">
+                    <div class="question-card">
+                        <div class="question-number">1</div>
+                        <div class="question-content">
+                            <h3>What is the CSS Box Model?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Structure of every element: content, padding, border, margin.</p>
+                                <p class="answer-arabic">هيكل كل عنصر في الصفحة بيتكون من: المحتوى، المسافة الداخلية، الإطار، والمسافة الخارجية</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">2</div>
+                        <div class="question-content">
+                            <h3>Explain the difference between content, padding, border, and margin</h3>
+                            <div class="answer">
+                                <p class="answer-english">Content: actual text/image inside • Padding: space between content and border • Border: frame around element • Margin: space outside element</p>
+                                <p class="answer-arabic">Content: النص أو الصورة داخل الصندوق • Padding: المسافة داخل البوكس بين المحتوى والحد • Border: الإطار المحيط بالعنصر • Margin: المسافة خارج العنصر بينه وبين العناصر الأخرى</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">3</div>
+                        <div class="question-content">
+                            <h3>What does box-sizing: border-box do?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Makes width and height include padding and border (doesn't increase total size).</p>
+                                <p class="answer-arabic">يجعل العرض والارتفاع يشملان الـ padding والـ border، يعني ما يزودش الحجم الكلي</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">4</div>
+                        <div class="question-content">
+                            <h3>What's the default box-sizing value?</h3>
+                            <div class="answer">
+                                <p class="answer-english">content-box (padding and border add to the total size).</p>
+                                <p class="answer-arabic">content-box يعني الـ padding والـ border بيتضافوا فوق الحجم</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">5</div>
+                        <div class="question-content">
+                            <h3>What is margin collapsing?</h3>
+                            <div class="answer">
+                                <p class="answer-english">When vertical margins meet (top + bottom), they take only the larger value instead of adding together.</p>
+                                <p class="answer-arabic">لما مارجن رأسيين يتقابلوا، بياخدوا قيمة الأكبر فقط بدل ما يتجمعوا</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">6</div>
+                        <div class="question-content">
+                            <h3>Difference between border and outline</h3>
+                            <div class="answer">
+                                <p class="answer-english">Border is inside the box and affects size • Outline is outside and doesn't affect size.</p>
+                                <p class="answer-arabic">border داخل البوكس وبتأثر على الحجم، outline بره البوكس ومش بتأثر على الحجم</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">7</div>
+                        <div class="question-content">
+                            <h3>Can margins be negative?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Yes, negative margin moves the element in that direction.</p>
+                                <p class="answer-arabic">أيوه، margin السالب بيخلّي العنصر يتحرك ناحية الاتجاه ده</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">8</div>
+                        <div class="question-content">
+                            <h3>Does padding accept negative values?</h3>
+                            <div class="answer">
+                                <p class="answer-english">No, padding cannot be negative.</p>
+                                <p class="answer-arabic">لأ، الـ padding ما ينفعش يكون سالب</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Overflow Section -->
+            <section class="topic-section" data-topic="overflow">
+                <div class="topic-header">
+                    <div class="topic-icon" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M12 8v8M8 12h8"/>
+                        </svg>
+                    </div>
+                    <h2>CSS Overflow <span class="question-count">(6 questions)</span></h2>
+                    <button class="toggle-btn">
+                        <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="questions-container">
+                    <div class="question-card">
+                        <div class="question-number">1</div>
+                        <div class="question-content">
+                            <h3>What does the overflow property do in CSS?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Controls what happens when content overflows an element's box.</p>
+                                <p class="answer-arabic">بتتحكم في اللي بيحصل لما المحتوى يكون أكبر من المساحة المحددة للعنصر</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">2</div>
+                        <div class="question-content">
+                            <h3>What are the possible values for overflow?</h3>
+                            <div class="answer">
+                                <p class="answer-english">visible, hidden, scroll, and auto.</p>
+                                <p class="answer-arabic">visible: المحتوى بيطلع برا • hidden: بيخفي الزيادة • scroll: شريط تمرير دايماً • auto: شريط تمرير لما يحتاج بس</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">3</div>
+                        <div class="question-content">
+                            <h3>What's the default value of overflow?</h3>
+                            <div class="answer">
+                                <p class="answer-english">The default value is visible.</p>
+                                <p class="answer-arabic">القيمة الافتراضية visible، يعني المحتوى هيطلع برا عادي</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">4</div>
+                        <div class="question-content">
+                            <h3>What's the difference between overflow: scroll and overflow: auto?</h3>
+                            <div class="answer">
+                                <p class="answer-english">scroll: always shows scrollbars • auto: shows scrollbars only when needed.</p>
+                                <p class="answer-arabic">scroll بيظهر الـ scrollbar دايماً، auto بيظهره بس لما المحتوى يكون كبير فعلاً</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">5</div>
+                        <div class="question-content">
+                            <h3>Can you control horizontal and vertical overflow separately?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Yes, using overflow-x and overflow-y.</p>
+                                <p class="answer-arabic">أيوه، overflow-x للأفقي وoverflow-y للرأسي</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">6</div>
+                        <div class="question-content">
+                            <h3>What happens if you set overflow: hidden?</h3>
+                            <div class="answer">
+                                <p class="answer-english">The overflowing content will be clipped and not visible.</p>
+                                <p class="answer-arabic">أي حاجة تطلع برا حدود العنصر هتتقصّ ومش هتظهر خالص</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Display Property Section -->
+            <section class="topic-section" data-topic="display">
+                <div class="topic-header">
+                    <div class="topic-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" rx="1"/>
+                            <rect x="14" y="14" width="7" height="7" rx="1"/>
+                        </svg>
+                    </div>
+                    <h2>Display Property <span class="question-count">(7 questions)</span></h2>
+                    <button class="toggle-btn">
+                        <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="questions-container">
+                    <div class="question-card">
+                        <div class="question-number">1</div>
+                        <div class="question-content">
+                            <h3>What is display: inline?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Element stays on same line with others, can't set width/height, takes only content space.</p>
+                                <p class="answer-arabic">العنصر بيكون على نفس السطر مع غيره، ما ينفعش نديه width أو height، بياخد مساحة على قد المحتوى</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">2</div>
+                        <div class="question-content">
+                            <h3>What is display: block?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Takes full line alone, can set width and height.</p>
+                                <p class="answer-arabic">بياخد صف كامل لوحده، نقدر نديه width وheight</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">3</div>
+                        <div class="question-content">
+                            <h3>What is display: inline-block?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Mix of both: stays on same line like inline, but can set width/height like block.</p>
+                                <p class="answer-arabic">خليط: بيكون على نفس السطر زي inline، لكن نقدر نديه width وheight زي block</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">4</div>
+                        <div class="question-content">
+                            <h3>What is display: none?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Element completely disappears from page as if it doesn't exist (takes no space).</p>
+                                <p class="answer-arabic">العنصر بيختفي تماماً من الصفحة وكأنه مش موجود، ما بياخدش مساحة</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">5</div>
+                        <div class="question-content">
+                            <h3>Difference between display: none and visibility: hidden?</h3>
+                            <div class="answer">
+                                <p class="answer-english">none: removes element completely • hidden: hides element but keeps its space.</p>
+                                <p class="answer-arabic">none بيخفي العنصر وبيشيل مكانه، hidden بيخفيه لكن بيحافظ على مكانه</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">6</div>
+                        <div class="question-content">
+                            <h3>What is display: flex?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Makes parent a flex container, arranges children in one dimension (row or column).</p>
+                                <p class="answer-arabic">بيخلي العنصر الأب flex container، ينظم العناصر في بعد واحد (صف أو عمود)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">7</div>
+                        <div class="question-content">
+                            <h3>What is display: grid?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Controls layout in two dimensions (rows and columns), ideal for complex layouts.</p>
+                                <p class="answer-arabic">تتحكم في بعدين (صفوف وأعمدة)، مثالية للتصميمات المعقدة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Position Property Section -->
+            <section class="topic-section" data-topic="position">
+                <div class="topic-header">
+                    <div class="topic-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 2v4M12 18v4M22 12h-4M6 12H2"/>
+                        </svg>
+                    </div>
+                    <h2>Position Property <span class="question-count">(8 questions)</span></h2>
+                    <button class="toggle-btn">
+                        <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="questions-container">
+                    <div class="question-card">
+                        <div class="question-number">1</div>
+                        <div class="question-content">
+                            <h3>What is position: static?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Default positioning, element follows normal document flow.</p>
+                                <p class="answer-arabic">الوضع الافتراضي، العنصر بيتبع التدفق الطبيعي للصفحة</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">2</div>
+                        <div class="question-content">
+                            <h3>What is position: relative?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Element moves relative to its original position, keeps space in document.</p>
+                                <p class="answer-arabic">العنصر بيتحرك بالنسبة لمكانه الأصلي، بس بيحتفظ بمكانه في الصفحة</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">3</div>
+                        <div class="question-content">
+                            <h3>What is position: absolute?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Element positioned relative to nearest positioned parent (or body), removed from flow.</p>
+                                <p class="answer-arabic">العنصر بيتحرك بالنسبة لأقرب أب عنده position غير static، بيخرج من التدفق الطبيعي</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">4</div>
+                        <div class="question-content">
+                            <h3>What is position: fixed?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Element fixed relative to viewport, stays in place when scrolling.</p>
+                                <p class="answer-arabic">العنصر ثابت بالنسبة للشاشة، بيفضل في مكانه حتى لو سكرولت</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">5</div>
+                        <div class="question-content">
+                            <h3>What is position: sticky?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Mix of relative and fixed: scrolls normally until threshold, then becomes fixed.</p>
+                                <p class="answer-arabic">خليط: بيتحرك عادي لحد ما يوصل لنقطة معينة، بعدها بيثبت زي fixed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">6</div>
+                        <div class="question-content">
+                            <h3>Difference between absolute and relative?</h3>
+                            <div class="answer">
+                                <p class="answer-english">relative: keeps space in flow • absolute: removed from flow, positioned relative to parent.</p>
+                                <p class="answer-arabic">relative بيحافظ على مكانه في الصفحة، absolute بيخرج من التدفق ويتحرك بالنسبة للأب</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">7</div>
+                        <div class="question-content">
+                            <h3>How to center element with position: absolute?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Use top: 50%; left: 50%; transform: translate(-50%, -50%);</p>
+                                <p class="answer-arabic">استخدم top: 50%; left: 50%; transform: translate(-50%, -50%); عشان يبقى في النص بالضبط</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">8</div>
+                        <div class="question-content">
+                            <h3>Why doesn't sticky work sometimes?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Must specify top/bottom value, parent can't have overflow: hidden or auto.</p>
+                                <p class="answer-arabic">لازم تحدد top أو bottom، والأب ما يكونش عليه overflow: hidden</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Z-Index & Stacking Section -->
+            <section class="topic-section" data-topic="zindex">
+                <div class="topic-header">
+                    <div class="topic-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="5" y="5" width="14" height="14" rx="2"/>
+                            <rect x="9" y="9" width="6" height="6" rx="1" fill="white"/>
+                        </svg>
+                    </div>
+                    <h2>Z-Index & Stacking <span class="question-count">(3 questions)</span></h2>
+                    <button class="toggle-btn">
+                        <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="questions-container">
+                    <div class="question-card">
+                        <div class="question-number">1</div>
+                        <div class="question-content">
+                            <h3>When does z-index not work?</h3>
+                            <div class="answer">
+                                <p class="answer-english">When element has position: static (default).</p>
+                                <p class="answer-arabic">لما يكون العنصر position: static، لازم يكون relative أو absolute أو fixed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">2</div>
+                        <div class="question-content">
+                            <h3>Difference between positive and negative z-index?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Positive: brings element forward • Negative: pushes element backward.</p>
+                                <p class="answer-arabic">الموجب بيخلي العنصر فوق، السالب بيخليه تحت</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">3</div>
+                        <div class="question-content">
+                            <h3>What if two elements have same z-index?</h3>
+                            <div class="answer">
+                                <p class="answer-english">The one that comes later in HTML appears on top.</p>
+                                <p class="answer-arabic">اللي جاي بعد في الكود بيظهر فوق</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Background Properties Section -->
+            <section class="topic-section" data-topic="background">
+                <div class="topic-header">
+                    <div class="topic-icon" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18M9 3v18"/>
+                        </svg>
+                    </div>
+                    <h2>Background Properties <span class="question-count">(1 question)</span></h2>
+                    <button class="toggle-btn">
+                        <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="questions-container">
+                    <div class="question-card">
+                        <div class="question-number">1</div>
+                        <div class="question-content">
+                            <h3>What is background-attachment?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Controls if background moves with page or stays fixed. Values: scroll (moves) or fixed (stays).</p>
+                                <p class="answer-arabic">بتحدد هل الخلفية تتحرك مع الصفحة (scroll) ولا ثابتة (fixed)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flexbox Section -->
+            <section class="topic-section" data-topic="flexbox">
+                <div class="topic-header">
+                    <div class="topic-icon" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="2" y="6" width="4" height="12" rx="1"/>
+                            <rect x="10" y="6" width="4" height="12" rx="1"/>
+                            <rect x="18" y="6" width="4" height="12" rx="1"/>
+                        </svg>
+                    </div>
+                    <h2>Flexbox <span class="question-count">(8 questions)</span></h2>
+                    <button class="toggle-btn">
+                        <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="questions-container">
+                    <div class="question-card">
+                        <div class="question-number">1</div>
+                        <div class="question-content">
+                            <h3>What is the purpose of Flexbox?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Arranges elements in a container flexibly and easily, controlling direction and alignment horizontally or vertically without float or position.</p>
+                                <p class="answer-arabic">بيُستخدم لترتيب العناصر داخل الحاوية بطريقة مرنة وسهلة، بتوزع المسافات وتتحكم في الاتجاه أفقي أو رأسي من غير float</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">2</div>
+                        <div class="question-content">
+                            <h3>Difference between justify-content and align-items?</h3>
+                            <div class="answer">
+                                <p class="answer-english">justify-content: controls horizontal distribution (main axis) • align-items: controls vertical distribution (cross axis).</p>
+                                <p class="answer-arabic">justify-content بتتحكم أفقياً، align-items بتتحكم رأسياً</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">3</div>
+                        <div class="question-content">
+                            <h3>Difference between align-items and align-content?</h3>
+                            <div class="answer">
+                                <p class="answer-english">align-items: aligns elements within one line • align-content: aligns all rows when using flex-wrap.</p>
+                                <p class="answer-arabic">align-items بتتحكم في محاذاة العناصر داخل سطر واحد، align-content بتتحكم في كل الصفوف</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">4</div>
+                        <div class="question-content">
+                            <h3>What does flex-direction do?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Determines the direction of elements: row (horizontal) or column (vertical).</p>
+                                <p class="answer-arabic">بتحدد اتجاه العناصر: صف (row) أو عمود (column)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">5</div>
+                        <div class="question-content">
+                            <h3>Difference between space-between, space-around, and space-evenly?</h3>
+                            <div class="answer">
+                                <p class="answer-english">space-between: first/last touch edges, space between only • space-around: equal space around each • space-evenly: all spaces equal.</p>
+                                <p class="answer-arabic">space-between: أول وآخر ملتصقين بالأطراف • space-around: مسافات حول كل عنصر • space-evenly: كل المسافات متساوية</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">6</div>
+                        <div class="question-content">
+                            <h3>What does flex-wrap do?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Makes elements wrap to new line when space isn't enough instead of staying in one line.</p>
+                                <p class="answer-arabic">بتخلي العناصر تنزل لسطر جديد لو المساحة مش كفاية</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">7</div>
+                        <div class="question-content">
+                            <h3>What does the order property do?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Changes element order within flex container without changing HTML code.</p>
+                                <p class="answer-arabic">بتغير ترتيب العنصر داخل flex من غير ما تغير الكود</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">8</div>
+                        <div class="question-content">
+                            <h3>What happens with flex-wrap: nowrap?</h3>
+                            <div class="answer">
+                                <p class="answer-english">All elements stay in one line even if there's not enough space, might overflow container.</p>
+                                <p class="answer-arabic">العناصر كلها هتفضل في سطر واحد حتى لو المساحة مش كفاية</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CSS Grid Section -->
+            <section class="topic-section" data-topic="grid">
+                <div class="topic-header">
+                    <div class="topic-icon" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" rx="1"/>
+                            <rect x="14" y="14" width="7" height="7" rx="1"/>
+                        </svg>
+                    </div>
+                    <h2>CSS Grid <span class="question-count">(5 questions)</span></h2>
+                    <button class="toggle-btn">
+                        <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="questions-container">
+                    <div class="question-card">
+                        <div class="question-number">1</div>
+                        <div class="question-content">
+                            <h3>Difference between Flexbox and Grid?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Flexbox: one-dimensional layout (row or column) • Grid: two-dimensional layout (rows + columns together).</p>
+                                <p class="answer-arabic">Flexbox بُعد واحد (سطر أو عمود)، Grid بُعدين (صفوف + أعمدة مع بعض)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">2</div>
+                        <div class="question-content">
+                            <h3>What do grid-template-columns and grid-template-rows do?</h3>
+                            <div class="answer">
+                                <p class="answer-english">grid-template-columns: defines number and size of columns • grid-template-rows: defines number and size of rows.</p>
+                                <p class="answer-arabic">grid-template-columns تحدد عدد الأعمدة وحجمهم، grid-template-rows تحدد الصفوف</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">3</div>
+                        <div class="question-content">
+                            <h3>Difference between gap, row-gap, and column-gap?</h3>
+                            <div class="answer">
+                                <p class="answer-english">gap: space between rows and columns together • row-gap: space between rows only • column-gap: space between columns only.</p>
+                                <p class="answer-arabic">gap للصفوف والأعمدة مع بعض، row-gap للصفوف بس، column-gap للأعمدة بس</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">4</div>
+                        <div class="question-content">
+                            <h3>What do justify-items and align-items do in Grid?</h3>
+                            <div class="answer">
+                                <p class="answer-english">justify-items: horizontal alignment within cells • align-items: vertical alignment within cells.</p>
+                                <p class="answer-arabic">justify-items محاذاة أفقية داخل الخلية، align-items محاذاة رأسية</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">5</div>
+                        <div class="question-content">
+                            <h3>Difference between justify-content and align-content in Grid?</h3>
+                            <div class="answer">
+                                <p class="answer-english">justify-content: aligns all columns horizontally • align-content: aligns all rows vertically.</p>
+                                <p class="answer-arabic">justify-content محاذاة كل الأعمدة أفقياً، align-content محاذاة كل الصفوف رأسياً</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Transitions & Animations Section -->
+            <section class="topic-section" data-topic="animations">
+                <div class="topic-header">
+                    <div class="topic-icon" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h2>Transitions & Animations <span class="question-count">(4 questions)</span></h2>
+                    <button class="toggle-btn">
+                        <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="questions-container">
+                    <div class="question-card">
+                        <div class="question-number">1</div>
+                        <div class="question-content">
+                            <h3>Difference between CSS Transitions and Animations?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Transition: smooth change on specific event (hover, focus) • Animation: continuous/programmed effects using @keyframes.</p>
+                                <p class="answer-arabic">Transition تغيير سلس عند حدث معين، Animation تأثيرات مستمرة باستخدام @keyframes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">2</div>
+                        <div class="question-content">
+                            <h3>What are the components of transition?</h3>
+                            <div class="answer">
+                                <p class="answer-english">property (what changes), duration (how long), timing-function (movement shape), delay (wait before start).</p>
+                                <p class="answer-arabic">property: الخاصية • duration: المدة • timing-function: شكل الحركة • delay: التأخير</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">3</div>
+                        <div class="question-content">
+                            <h3>What are the components of animation?</h3>
+                            <div class="answer">
+                                <p class="answer-english">@keyframes (defines movement), animation-name, animation-duration, animation-iteration-count (repetitions).</p>
+                                <p class="answer-arabic">@keyframes تحدد الحركة، animation-name الاسم، animation-duration المدة، iteration-count عدد التكرار</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">4</div>
+                        <div class="question-content">
+                            <h3>How to make animation repeat infinitely?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Use animation-iteration-count: infinite;</p>
+                                <p class="answer-arabic">استخدم animation-iteration-count: infinite; عشان تتكرر بلا حدود</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pseudo-classes & Pseudo-elements Section -->
+            <section class="topic-section" data-topic="pseudo">
+                <div class="topic-header">
+                    <div class="topic-icon" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/>
+                        </svg>
+                    </div>
+                    <h2>Pseudo-classes & Pseudo-elements <span class="question-count">(4 questions)</span></h2>
+                    <button class="toggle-btn">
+                        <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="questions-container">
+                    <div class="question-card">
+                        <div class="question-number">1</div>
+                        <div class="question-content">
+                            <h3>Difference between pseudo-class and pseudo-element?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Pseudo-class: styles element in specific state (:hover, :focus) • Pseudo-element: styles specific part (::before, ::after).</p>
+                                <p class="answer-arabic">Pseudo-class بتستهدف حالة معينة للعنصر، Pseudo-element بتستهدف جزء معين منه</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">2</div>
+                        <div class="question-content">
+                            <h3>Difference between :hover, :active, and :focus?</h3>
+                            <div class="answer">
+                                <p class="answer-english">:hover (mouse over) • :active (while clicking) • :focus (when selected/tabbed to).</p>
+                                <p class="answer-arabic">:hover لما الماوس فوق العنصر • :active وقت الضغط • :focus لما العنصر يكون محدد</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">3</div>
+                        <div class="question-content">
+                            <h3>How to add content before element with CSS?</h3>
+                            <div class="answer">
+                                <p class="answer-english">Use ::before with content property.</p>
+                                <p class="answer-arabic">استخدم ::before مع خاصية content</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-number">4</div>
+                        <div class="question-content">
+                            <h3>When to use :first-child and :last-child?</h3>
+                            <div class="answer">
+                                <p class="answer-english">To target first or last element in a group for special styling.</p>
+                                <p class="answer-arabic">لاستهداف أول أو آخر عنصر في مجموعة عشان تديه تنسيق خاص</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Good luck with your interview! 🚀</p>
+            <p class="footer-note">Understanding is more important than memorization</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

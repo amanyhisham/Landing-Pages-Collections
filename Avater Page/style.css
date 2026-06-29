@@ -1,0 +1,822 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*{
+    padding:0;
+    margin: 0;
+ }
+ html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+}
+ 
+ /*global classes*/
+ ul{
+    list-style: none;
+ 
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+body{
+    height: 100vh;
+      color: white;
+     background-image: linear-gradient(to right, #01022d, rgb(12, 12, 12));
+      
+}
+/* Hero section  ---------------------------------------------------------*/
+.avatar-container{
+    width:100%;
+    height:700px;
+    background-image: 
+    linear-gradient(to right, #01022de2 30%, #00000088)
+     , url(Asstes/Image/Home.webp);
+
+background-size: cover;        /* تخلي الصورة تملا المساحة كاملة */
+  background-position: center;   /* تظبط مكان الصورة */
+  background-repeat: no-repeat;  /* تمنع التكرار أو الخط من اليمين */
+   overflow: hidden;              /* يمنع أي زيادة في الصورة من الظهور */
+
+    }
+ .avatar-container:hover{
+     background:linear-gradient(to right, #01022de2 25%, transparent)
+     , url(Asstes/Image/Home.webp);
+     background-size: cover;        /* تخلي الصورة تملا المساحة كاملة */
+  background-position: center;   /* تظبط مكان الصورة */
+  background-repeat: no-repeat;  /* تمنع التكرار أو الخط من اليمين */
+   overflow: hidden;  
+ }   
+ header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+    
+ }
+.avatar-logo{
+    font-size: 30px;
+    font-weight: bold;      
+    text-transform: uppercase;
+    color: white;
+    margin-left:30px;
+     transition: all 0.3s ease; /* هنا duration بسيط */
+  text-shadow: 0 0 0px #00b7ff; /* default */
+}
+.avatar-logo:hover {
+  text-shadow: 0 0 10px #00b7ff, 0 0 20px #00b7ff; /* يظهر glow */
+}
+
+/* نفس الفكرة للعناوين الرئيسية */
+.about-title,
+.vedio_title,
+.Photos_section .title,
+.reviews-section h2 {
+  transition: all 0.3s ease;
+  text-shadow: 0 0 0px #00b7ff;
+}
+
+.about-title:hover,
+.vedio_title:hover,
+.Photos_section .title:hover,
+.reviews-section h2:hover {
+  text-shadow: 0 0 10px #00b7ff, 0 0 20px #00b7ff;
+}
+ul {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+li a{
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+li a:hover{
+border-bottom: 2px solid white;
+}
+.avatar-content{
+    color:white;
+width:50%;
+padding: 40px;
+margin-top: 100px;
+margin-left: 100px;
+}
+.avatar-content h1{
+    font-size: 100px;
+text-transform: uppercase;}
+
+.avatar-content p{
+    letter-spacing: 1px;
+    line-height: 1.5;
+    width: 55%;
+    padding: 20px 0;
+}
+.avatar-content  .btn{
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #ffffff9d;
+    color: #0b0e4758;
+    font-size: 18px;
+     
+    border-radius:50px;
+    transition: 0.3s;
+}
+.avatar-content  .btn:hover{
+    background-color: transparent;
+    color:white;
+    border:2px solid white;
+}
+
+/*about section ---------------------------------------------------------*/
+.about-section{
+    padding: 30px 20px;
+    text-align: center; 
+ }
+.about-title{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+    .about-title::after{
+       content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: white;
+    margin: 10px auto 0;
+    border-radius: 50px;
+}
+    
+.about-content{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+ }
+.about-content p{
+    width:45%;
+    margin:50px 0;
+    line-height: 1.6;
+      text-align: left;
+  font-size: 1.1rem;
+ 
+}
+ .about-content img {
+  width: 250px; /* عدّلي المقاس حسب احتياجك */
+  height: 250px;
+  border-radius: 50%; /* عشان تبقى مدوّرة */
+  box-shadow: 0 0 25px rgba(0, 183, 255, 0.7); /* ضوء أزرق خفيف */
+  animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
+}
+/* Photos ------------------------------------------------------------------------------------------*/
+.Photos_section{
+     
+     color:white;
+        padding: 10px 0 100px;
+}
+.Photos_section .section-container  .title{
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 60px 0 100px;
+    
+
+  
+
+}
+.Photos_section .section-container  .title::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: white;
+    margin: 10px auto 0;
+    border-radius: 50px;
+}
+.all_photo{
+   display: flex;
+  flex-direction: column; /* خلي الجزءين فوق بعض */
+  align-items: center; /* يخليهم في النص */
+  justify-content: center;
+  gap: 30px; /* مسافة بين الصفوف */
+  padding: 30px 0;
+}
+.photo_part1,
+.photo_part2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+  .all_photo img{
+     width: 280px;   /* 👈 عرض موحّد */
+  height: 200px;  /* 👈 ارتفاع موحّد */
+  border-radius: 10px;
+  object-fit: cover; /* 👈 يخلي الصورة تملى المساحة بدون تشوه */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+  }
+ .all_photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 183, 255, 0.7);
+}
+/*bluer on photo*/
+.photo-card {
+  position: relative; /* مهم عشان overlay يبقى فوق الصورة */
+  width: 280px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.1); /* تكبير بسيط عند hover */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* لون أسود نصف شفاف */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0; /* مخفي في البداية */
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(3px); /* بلور خفيف */
+}
+
+.photo-card:hover .overlay-text {
+  opacity: 1; /* يظهر عند hover */
+}
+
+/*----show------------------------------------------------*/
+.vedio_section{
+     
+     color:white;
+ padding: 30px 20px;
+    text-align: center;
+   }
+.vedio_title{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+    .vedio_title::after{
+       content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: white;
+    margin: 10px auto 0;
+    border-radius: 50px;
+}
+    
+.movie-video {
+  width: 80%; /* ياخد 80٪ من عرض الصفحة */
+  max-width: 900px; /* أقصى عرض للفيديو */
+  border-radius: 15px; /* زوايا ناعمة */
+  display: block;
+  margin: 40px auto; /* وسط الصفحة */
+  box-shadow: 0 0 30px rgba(0, 183, 255, 0.6); /* ظل أزرق ناعم */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.movie-video:hover {
+  transform: scale(1.03); /* تكبير بسيط عند المرور عليه */
+  box-shadow: 0 0 40px rgba(0, 183, 255, 0.9);
+}
+
+.para_vedio{
+  font-size: 23px;
+}
+
+/*reviews*/
+ .reviews-section {
+  background: linear-gradient(to right, #01022d, #0a0a0a);
+  color: white;
+  padding: 60px 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.review-stats h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: white;
+}
+
+.rating-bar {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.rating-bar span {
+  width: 80px;
+}
+
+.bar {
+  flex: 1;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.fill {
+  height: 100%;
+  background: #00b7ff; /* Blue fill */
+  
+}
+
+.review-list {
+  flex: 1;
+  max-width: 450px;
+}
+
+.review-item {
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-header i {
+  font-size: 22px;
+  color:  #ffffff9d;
+    
+}
+
+.username {
+  font-weight: bold;
+}
+
+.stars {
+  margin-left: auto;
+  color:#00b7ff;
+  font-size: 18px;
+}
+
+.review-text {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.submit-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 12px 30px;
+  background-color: #ffffff9d;
+    color: #0b0e4758;
+     
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+   background-color: transparent;
+    color:white;
+    border:2px solid white;
+}
+
+
+ 
+
+ 
+/* footer styling ------------------------------------------------------------------------------------------*/
+ /* Footer CSS */
+.footer {
+  background-color: #01022d;
+  color: white;
+  padding: 20px 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.footer-right a {
+  color: white;
+  margin-left: 15px;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.footer-right a:hover {
+  color: #00b7ff;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-right a {
+    margin-left: 10px;
+    font-size: 1.3rem;
+  }
+}
+
+
+
+/* حركة الطلوع والنزول */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* تأثير النور النبضي */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 183, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.9);
+  }
+}
+
+/*responsive nav bar menu berger------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+:root{
+     --font-size-m:1rem;
+    --font-size-l:1.3rem;
+    --font-size-xl:1.5rem;
+    --font-size-xxl:1.8rem;
+    --font-size-xxxl:2rem;
+}
+  .navbar .nav-items{
+    display: block;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    background: #01022de2;
+    transition: left 0.3s ease;
+  }
+body.show-mobile-menu .navbar .nav-items{
+    left: 0;
+}
+ /* البلور */ 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+  z-index: 8; /* تحت القائمة */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease}
+
+/* لما القائمة تفتح */
+body.show-mobile-menu .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* نخلي القائمة فوق البلور */
+.navbar .nav-items {
+  z-index: 10;
+}
+
+  .navbar .nav-link {
+    color:  white;
+    display: block;
+    margin-top: 17px;
+    font-size: 18px;
+  }
+
+ .navbar .fa-bars{
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+  }
+ .navbar .fa-times{
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    top:30px;
+    right:30px;
+    }
+}
+@media screen and (min-width: 900px) {
+    .navbar .fa-bars ,.navbar .fa-times{
+    display: none;
+}
+
+}
+/* Hero section mobile  ---------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  /*header*/
+  .avatar-container {
+    height: 100vh;
+    background-position: center;
+  }
+
+  .avatar-content {
+      
+    text-align: center;
+        color:white;
+width:50%;
+padding: 40px;
+margin-top: 100px;
+margin-left: 20px;
+  }
+
+  .avatar-content h1 {
+    font-size: 45px;
+  }
+
+  .avatar-content p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 45px 0;
+  }
+
+  .avatar-content .btn {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+ /*about section mobile*/
+  .about-content {
+    flex-direction: column; /* نخلي الصورة فوق والنص تحت */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-content img {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+  }
+
+  .about-content p {
+    width: 90%;
+    text-align: center;
+    font-size: 0.95rem;
+    margin: 10px 0;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+  /*photo*/
+   .all_photo {
+    padding: 20px 0;
+  }
+
+  .photo_part1,
+  .photo_part2 {
+    flex-direction: column; /* يخلي الصور فوق بعض */
+    gap: 20px;
+  }
+
+  .all_photo img {
+    width: 90%;   /* يشغل معظم عرض الهاتف */
+    height: auto; /* يخلي الطول يتناسب مع العرض */
+  }
+
+  .Photos_section .section-container .title {
+    font-size: 35px; /* تصغير العنوان */
+    margin: 40px 0 60px;
+  }
+  /*vedio*/
+.vedio_section {
+    padding: 15px 20px 40px; /* أقل padding-top */
+  }
+
+   
+  .movie-video {
+    width: 95%; /* ياخد تقريبا كل عرض الشاشة */
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .para_vedio {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .vedio_title {
+    font-size: 1.8rem;
+    padding-top: 20px;
+        margin-bottom: 15px; /* قلل المسافة أسفل العنوان */
+
+  }
+    /*review*/
+
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .review-stats {
+    width: 90%;
+    text-align: center;
+  }
+
+  .review-list {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .rating-bar span {
+    width: 70px;
+    font-size: 14px;
+  }
+
+  .rating-bar .bar {
+    height: 8px;
+  }
+
+  .review-item {
+    padding: 12px;
+  }
+
+  .review-text {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    width: 90%;
+    padding: 10px 0;
+    font-size: 15px;
+  }
+}
+
+/* Responsive tablet-----------------------------------------------*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /*hero section tablet*/
+  .avatar-content {
+    width: 70%;
+    margin-top: 80px;
+    padding: 30px;
+  }
+
+  .avatar-content h1 {
+    font-size: 70px;
+  }
+
+  .avatar-content p {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .avatar-content .btn {
+    font-size: 17px;
+    padding: 10px 25px;
+  }
+/*about section tablet*/
+.about-content {
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .about-content img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-content p {
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+  /*photos*/
+ .all_photo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* صورتين في الصف */
+    gap: 25px;
+    padding: 25px 0;
+  }
+
+  .all_photo img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* يخلي الطول يساوي العرض */
+    object-fit: cover;    /* الصورة تملى المربع بدون تشوه */
+    border-radius: 10px;
+  }
+
+  .Photos_section .section-container .title {
+    font-size: 45px;
+    margin: 50px 0 80px;
+  }
+  /*vedio*/
+    .vedio_section {
+    padding: 20px 20px 50px; /* قللنا padding-top */
+  }
+
+  .vedio_title {
+    margin-bottom: 20px; /* قلل المسافة أسفل العنوان */
+  }
+  /*review*/
+  .reviews-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .review-stats {
+    width: 45%;
+    text-align: center;
+  }
+
+  .review-list {
+    width: 45%;
+    max-width: 100%;
+  }
+
+  .rating-bar span {
+    width: 75px;
+    font-size: 15px;
+  }
+
+  .rating-bar .bar {
+    height: 9px;
+  }
+
+  .review-item {
+    padding: 14px;
+  }
+
+  .review-text {
+    font-size: 15px;
+  }
+
+  .submit-btn {
+    width: auto;
+    padding: 12px 30px;
+  }
+}
+ 
