@@ -1,0 +1,346 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+color:white;
+}
+
+.container{
+    background-color: black;
+    height: 100vh;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding:20px 0px;
+     width:80%;
+     margin:auto;
+     align-items: center;
+}
+header .logo img{
+    width:40px;
+}
+header .logo img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    transition: 0.3s;
+}
+
+header ul {
+    display:flex;
+     justify-content: space-between;
+     list-style: none;
+     gap:15px;
+}
+header ul  li a{
+    text-decoration: none;
+    color:white;
+    margin:0 20px ;
+    position: relative;
+   transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+header ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ecca07;
+  transition: width 0.4s ease;
+}
+
+header ul li a:hover {
+  color: #ffeb70; /* درجة أهدى من الأصفر الأساسي */
+  text-shadow: 0 0 8px rgba(236, 202, 7, 0.5); /* توهج بسيط */
+}
+
+header ul li a:hover::after {
+  width: 100%;
+}
+.container .contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:80%;
+    margin: auto;
+    margin-top: 90px;
+
+}
+.container .contact .text{
+    width:40%;
+}
+.container .contact .text h2{
+    text-transform: uppercase;
+    margin:10px 0;
+    font-size: 40px;
+}
+.container .contact .text h2:hover{
+  text-shadow: 0 0 10px #ecca07, 0 0 20px #ecca07, 0 0 30px #ecca07;
+  transition: 0.3s ease;
+}
+.container .contact .text p{
+    font-size: 18px;
+    margin:20px 0;
+    line-height: 1.4;
+}
+.container .contact .text a{
+    color:black;
+    background-color: white;
+    border-radius: 50px;
+    padding:8px 15px;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-top:8px;
+}
+.container .contact .text a:hover{
+color:white;
+    background-color: transparent;
+    border: 2px solid white;
+    
+}
+.container .contact .Image{
+    width:30%;
+}
+.container .contact .Image img{
+    width:180px;
+}
+.icons{
+    position:absolute;
+    bottom:0px;
+     /*this as element is absolute*/
+    left: 50%; /* تبدأ من منتصف العرض */
+  transform: translateX(-50%); /* ترجّعها للنص بالضبط */
+    bottom: 20px; /* تبقى فوق حافة الشاشة بـ 20px */
+gap:5px
+}
+.icons img{
+    width:40px;
+    transition: 0.5s;
+}
+.icons img:hover {
+  transform: scale(1.3);
+   cursor: pointer;
+}
+/* Responsive Design */
+
+/* للشاشات المتوسطة (Tablets) */
+@media (max-width: 1024px) {
+    header {
+        width: 90%;
+    }
+    
+    .container .contact {
+        width: 90%;
+        margin-top: 60px;
+    }
+    
+    .container .contact .text {
+        width: 50%;
+    }
+    
+    .container .contact .text h2 {
+        font-size: 35px;
+    }
+    
+    .container .contact .text p {
+        font-size: 16px;
+    }
+    
+    .container .contact .Image {
+        width: 35%;
+    }
+    
+    .container .contact .Image img {
+        width: 150px;
+    }
+}
+
+/* للشاشات الصغيرة (Mobile Landscape) */
+@media (max-width: 768px) {
+    header {
+        width: 95%;
+        padding: 15px 0px;
+    }
+    
+    header .logo img {
+        width: 35px;
+    }
+    
+    header ul {
+        gap: 10px;
+    }
+    
+    header ul li a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    
+    .container .contact {
+        width: 95%;
+        margin-top: 40px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .container .contact .text {
+        width: 100%;
+        order: 2;
+    }
+    
+    .container .contact .text h2 {
+        font-size: 28px;
+    }
+    
+    .container .contact .text p {
+        font-size: 15px;
+        margin: 15px 0;
+    }
+    
+    .container .contact .Image {
+        width: 60%;
+        order: 1;
+        margin-bottom: 20px;
+    }
+    
+    .container .contact .Image img {
+        width: 130px;
+    }
+    
+    .icons {
+        bottom: 10px;
+    }
+    
+    .icons img {
+        width: 35px;
+    }
+}
+
+/* للشاشات الصغيرة جداً (Mobile Portrait) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    header ul li a {
+        margin: 0 8px;
+        font-size: 13px;
+    }
+    
+    .container .contact {
+        margin-top: 20px;
+    }
+    
+    .container .contact .text h2 {
+        font-size: 24px;
+    }
+    
+    .container .contact .text p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .container .contact .text a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .container .contact .Image {
+        width: 70%;
+    }
+    
+    .container .contact .Image img {
+        width: 110px;
+    }
+    
+    .icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 90%;
+        bottom: 5px;
+    }
+    
+    .icons img {
+        width: 30px;
+    }
+}
+
+/* للشاشات الكبيرة جداً */
+@media (min-width: 1440px) {
+    .container .contact .text h2 {
+        font-size: 50px;
+    }
+    
+    .container .contact .text p {
+        font-size: 20px;
+    }
+    
+    .container .contact .Image img {
+        width: 220px;
+    }
+    
+    .icons img {
+        width: 45px;
+    }
+}
+/* Animation للموبايل - يتحرك لفوق وتحت */
+@keyframes floatPhone {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.container .contact .Image img {
+  animation: floatPhone 3s ease-in-out infinite;
+}
+
+/* تأكد إن الـ Animation يشتغل على كل الشاشات */
+@media (max-width: 1024px) {
+  .container .contact .Image img {
+    animation: floatPhone 3s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  .container .contact .Image img {
+    animation: floatPhone 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes floatPhone {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container .contact .Image img {
+    animation: floatPhone 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes floatPhone {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+}

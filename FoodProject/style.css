@@ -1,0 +1,1647 @@
+/* GENERAL STYLE */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+}
+body{
+  font-family:"Poppins", sans-serif;
+}
+ul{ list-style:none; }
+a{ text-decoration:none; }
+
+/* header-------------------------------------------------------------------------- */
+.navbar{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+   width:100%;
+  position:fixed;
+  top:0;
+  background:#fff;
+  z-index:10000;
+  box-shadow:0 0 15px rgba(0,0,0,.2);
+  padding: 5px 0;
+}
+.logo img{ width:100px;  
+   max-width: 100%;
+  height: auto;
+  cursor: pointer; }
+
+.nav-items{
+  display:flex;
+  gap:25px;
+}
+
+.nav-items a{
+  color:black;
+  font-weight:500;
+  font-size:17px;
+}
+.nav-items a::after{
+   content: '';
+   width: 0%;
+   height: 2px;
+   left:0px;
+   display: block;
+   transition: 0.3s;
+
+}
+.nav-items a:hover::after{
+   width: 100%;
+   background-color: #faC031;
+}
+ 
+.icons i{
+  margin:0 5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+.icons i:hover{ color:#faC031; }
+/* HIDE BUTTONS ON DESKTOP */
+#menu-open-button,
+#menu-close-button{
+  display:none;
+}
+/*--main-hero-------------------------------------------------------------------------------------------------------------- */
+.main_content{
+   padding-top: 140px;   /* ممكن تزودي الرقم حسب ما تحبي */
+}
+ 
+.hero_contant{
+    display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 30px;
+   flex-wrap: wrap; /* allow wrap on small screens */
+ }
+ .text-side{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  max-width:600px;
+  margin-top: 0px;   /* نزول لتحت */
+  margin-left: 60px;  /* تأخير عن الشمال */
+}
+.hero_contant .text-side_main .title h1{
+  font-size: 60px ;
+  font-weight: 600;
+  line-height: 1.2;
+    }
+.hero_contant .title span{
+   color: #faC031;
+   font-family: "MV Boli", cursive;
+   padding-left: 7px;
+}
+/* image container -> make image responsive */
+.hero_contant .img{
+   max-width: 55%;
+   margin-top: 40px;  
+
+}
+.hero_contant .img img{
+  width: 100%;
+  max-width: 660px;        /* limit maximum */
+  height: auto;
+  display:block;
+  object-fit: contain;
+}
+ .text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* يبدأوا من الشمال */
+  gap: 15px; /* مسافة بين العناصر */
+  max-width: 600px; /* علشان ما يمدش بعرض كبير */
+
+ }
+
+ .text-block p {
+  font-size: 17px;
+  line-height: 1.6;
+    margin: 20px 0; /* 20px فوق وتحت */
+
+}
+.main_content .btn_icon{
+   background-color: #fac031;   /* اللون الأصفر */
+  display: inline-flex;        /* عشان البوتن والآيكون يكونوا جنب بعض */
+  align-items: center;         /* ضبط المحاذاة */
+  justify-content: center;     /* توسيط العنصرين */
+  gap: 4px;                    /* مسافة بين الزر والآيكون */
+  padding: 12px 18px;          /* حجم الداخلي */
+  border-radius: 3px;          /* الأطراف الدائرية */
+  cursor: pointer;
+ }
+.main_content .btn_icon button{
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color:#fff;
+}
+
+.main_content .btn_icon i{
+  font-size: 16px;
+    color:#fff;
+      transition: 0.3s;}
+.main_content .btn_icon i:hover{
+    transform: translateX(7px);
+
+}
+/*about----------------------------------------------------------------------*/
+.about{
+  
+  width: 100%;
+  min-height: 100vh;  
+  padding: 70px 0;
+}
+
+.container_about{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap; /* عشان على الشاشات الصغيرة ينزل تحت */
+ }
+ .container_about .img{
+  width: 50%;        
+  margin-top: 50px;
+}
+
+.container_about .img img{
+  width: 100%;
+  display: block;
+  object-fit: contain;
+}
+.about-details{
+  width: 40%;        /* يكمل باقي المساحة */
+}
+.container_about  .about-details span{
+   color: #faC031;
+margin-right: 12px;
+ font-family: "MV Boli", cursive;
+ }
+ .container_about  .about-details h2{
+    font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 55px;
+}
+ .container_about  .about-details h3{
+   font-size: 30px;
+   margin-bottom: 50px;
+ }
+  .container_about  .about-details p{
+   line-height: 22px;
+   margin-bottom: 100px;
+   text-align: justify;
+   }
+   .container_about  .about-details a{
+        background-color: #fac031;    
+      padding: 12px 18px;           
+      border-radius: 3px;           
+     cursor: pointer;
+     color:white;
+     text-decoration: none;
+   }
+   .floating img{
+  animation: float 3s ease-in-out infinite;
+}
+/*Menu----------------------------------------------------------------------*/
+.Menu{
+   padding:70px 0;
+   width: 100%;
+}
+.Menu h2{
+   font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+text-align: center;
+margin-bottom: 30px;
+}
+.Menu h2 span
+{
+   color: #faC031;
+   font-family: "MV Boli", cursive;
+    position: relative;   /* ده المهم */
+   display: inline-block; /* عشان الـ after يتظبط صح */
+ }
+.Menu h2 span::after{
+   content: '';
+   width:100%;
+   height: 2px;
+   background-color: #faC031;
+    position: absolute;
+   left: 0;
+   bottom: -3px;       /* مكان الخط تحت الكلمة */
+      border-radius: 2px;
+
+}
+.Menu .menu_cards{
+   width:95%;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-gap:15px;
+
+}
+.Menu .menu_cards .card_sm{
+ height: 480px;
+ box-shadow: 0 0 10px rgba(0,0,0,0.2); /* لاحظ px مع rgba */
+  border-radius: 10px; /* لو عايزة حواف ناعمة */
+  overflow: hidden; /* عشان الصورة متطلعش برا الحواف */
+  background: #fff; /* ضروري علشان الشادو يظهر بوضوح */
+  margin-bottom: 20px;
+   padding: 8px 15px;
+ 
+}
+ .Menu .menu_cards .card_sm .img{
+    width: 100%;
+   height: 225px; /* ارتفاع معقول */
+   margin: 0 auto;
+   overflow: hidden; /* ده يمنع الصورة من الخروج */
+    position: relative; /* لتحديد الـ hover */
+   box-sizing: border-box; /* عشان الـ padding ميزودش العرض */
+ transition: 0.3s all ease;
+}
+
+.Menu .menu_cards .card_sm .img img{
+   width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+ }
+.Menu .menu_cards .card_sm .img:hover img {
+    transform: scale(1.2); /* تكبير داخل الكارد فقط */
+}
+.Menu .menu_cards .card_sm .icon_heart{
+  position: absolute; /* الآن بالنسبة للصورة */
+    top: 10px;
+     right: 10px; /* خارج الصورة في البداية */
+
+    font-size: 20px;
+    color:black;
+    cursor: pointer;
+    z-index: 2;
+    display: none; /* مخفية افتراضياً */
+     text-shadow: 0 0 8px black; /* هالة حول الأيقونة */
+     /* التحريك */
+    transform: translateX(50px); /* تبدأ خارج الصورة */
+    opacity: 0; /* تبدأ مخفية */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* سرعة الحركة */
+}
+.Menu .menu_cards .card_sm .icon_heart i{
+   font-size: 22px;
+    
+}
+.Menu .menu_cards .card_sm .icon_heart i:hover{
+   color: #faC031;
+}
+.Menu .menu_cards .card_sm .img:hover .icon_heart {
+    display: block; /* تظهر لما هوف على الصورة */
+     transform: translateX(0); /* ترجع لمكانها الطبيعي */
+    opacity: 1; /* تصبح ظاهرة */
+}
+.Menu .menu_cards .card_sm .content {
+    width: 100%;          /* عرض كامل للكارد */
+    text-align: center;   /* يجعل العناصر inline-block داخلها في المنتصف */
+}
+
+.Menu .menu_cards .card_sm .content h2{
+   font-size: 25px;
+   font-weight: 600;
+   text-align: center;
+   color: #faC031;
+   margin-top: 15px;
+   margin-bottom: 10px;
+   margin-left: auto;
+   margin-right: auto;
+}
+.Menu .menu_cards .card_sm .content p{
+   text-align: center;
+  line-height: 21px;
+  margin-top: 8px;
+}
+.Menu .menu_cards .card_sm .content h3{
+    text-align: center;
+    margin-top: 10px;
+}
+.Menu .menu_cards .card_sm .content .icons{
+   text-align: center;
+   margin-top: 7px;
+}
+.Menu .menu_cards .card_sm .content .icons i{
+   color: #faC031;
+   text-align: center;
+}
+.Menu .menu_cards .card_sm .content a{
+     position: relative; /* مهم للـ pseudo-element */
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 8px 20px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    overflow: hidden; /* يخلي الـ pseudo-element داخل الزر */
+    z-index: 1;
+    transition: color 0.3s ease; /* لتغيير لون النص */
+ }
+ 
+.Menu .menu_cards .card_sm .content a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* يبدأ من اليسار خارج الزر */
+    width: 100%;
+    height: 100%;
+    background-color:#fac031;
+    z-index: -1; /* تحت النص */
+    transition: all 0.3s ease;
+ }
+.Menu .menu_cards .card_sm .content a:hover::before {
+    left: 0; /* يدخل تدريجيًا من اليسار */
+}
+
+ /* Gallery ------------------------------------------------------------------------------------------*/
+.Photos_section .section-container .title{
+font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+  color:black;
+}
+.Photos_section .title span{
+     color: #faC031;
+   font-family: "MV Boli", cursive;
+   padding-left: 7px;
+       position: relative; /* مهم للـ ::after */
+    display: inline-block; /* عشان width يشتغل */
+
+}
+.Photos_section .title span::after{
+   content: '';
+   width:100%;
+   height: 2px;
+   background-color: #faC031;
+    position: absolute;
+   left: 0;
+   bottom: -3px;       /* مكان الخط تحت الكلمة */
+      border-radius: 2px;
+
+}
+ .Photos_section{
+    color: white;
+    padding: 10px 0 100px;
+}
+
+.Photos_section .section-container .title{
+    text-align: center;
+    font-size: 50px;
+}
+ 
+.all_photo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.photo_part1,
+.photo_part2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+ .photo-card {
+    position: relative;
+    width: 450px;   /* 👈 حجم أكبر زي الصور اللي في الموقع */
+    height: 300px;  /* 👈 ارتفاع أكبر */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 👈 مهم جداً عشان الصورة تملى المساحة */
+    object-position: center; /* 👈 تركيز على وسط الصورة */
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: scale(1.05);
+ }
+
+.photo-card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column; /* 👈 عشان النص والزر يكونوا فوق بعض */
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* 👈 مسافة بين النص والزر */
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(3px);
+    padding: 20px; /* 👈 مسافة داخلية */
+}
+
+.overlay-text h2 {
+    font-size: 28px;
+    color: #fac031;
+    margin: 0;
+}
+
+.overlay-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0;
+ }
+ .overlay-text p strong{
+   color: #faC031;
+   font-size: 30px;
+   font-family: polo;
+       display: inline-block; /* مهم عشان margin-bottom يشتغل */
+   margin-bottom: 10px;
+ }
+
+.overlay-text a {
+    background-color: #fac031;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s;
+    color:black;
+}
+.photo-card:hover .overlay-text {
+    opacity: 1;
+} 
+/*---------------------------------------review-----------------------------------------------------------------------------------------*/
+.Review   {
+width:100%;
+   height: 100vh;
+   padding: 70px 0;
+ }
+.Review h2{
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+text-align: center;
+margin-bottom: 30px;
+}
+.Review h2 span
+{
+   color: #faC031;
+   font-family: "MV Boli", cursive;
+    position: relative;    
+   display: inline-block;  
+ }
+ .Review h2 span::after{
+   content: '';
+   width:100%;
+   height: 2px;
+   background-color: #faC031;
+    position: absolute;
+   left: 0;
+   bottom: -3px;       /* مكان الخط تحت الكلمة */
+      border-radius: 2px;
+
+}
+ .Review .cards_review{
+   width:97%;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   margin: 70px auto;
+ }
+  .Review .cards_review .card_sm{
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+width:24%;
+height: 550px;
+margin: 0 8px;
+border-radius: 5px;
+padding: 8px 20px;
+ transition: 0.4s;
+  text-align: center;
+  }
+       
+    .Review .cards_review .card_sm .img-review img{
+      width:180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #cccccc;
+        transition: transform 0.3s ease; /* هنا الانتقال */
+
+    }
+     .Review .cards_review .card_sm:hover .img-review img{
+    transform: translateY(-60px);
+     }
+ 
+.Review .cards_review .name h2{
+    font-size: 25px;
+    transition: 0.3s;
+    margin-bottom: 4px; /* مسافة بسيطة بين الاسم والنجوم */
+    margin-top: -8px;
+      transition: transform 0.3s ease; /* هنا الانتقال */
+
+}
+
+.Review .cards_review .card_sm:hover .name h2{
+    transform: translateY(-50px);
+}
+
+.Review .cards_review .name{
+    transition: 0.3s;
+    text-align: center;
+}
+
+.Review .cards_review .rate {
+    display: flex;
+    justify-content: center;
+    margin-top: 0; /* إلغاء المسافة العلوية */
+    gap: 2px; /* مسافة صغيرة بين النجوم */
+      transition: transform 0.3s ease; /* إضافة انتقال */
+
+}
+
+.Review .cards_review .rate i{
+    color: #fac031;
+    font-size: 14px;
+}
+
+.Review .cards_review .card_sm:hover .name .rate {
+  transform: translateY(-40px);
+}
+.Review .cards_review .card_sm .icon-social{
+   text-align: center;
+
+}
+.Review .cards_review .card_sm .icon-social i{
+   font-size: 15px;
+   opacity: 0;
+   margin:5px 1px;
+   cursor: pointer;
+}
+.Review .cards_review .card_sm:hover .icon-social i{ 
+   opacity: 1;
+   transform: translateY(-30px);
+
+}
+.Review .cards_review .card_sm .icon-social i:hover{
+   color: #faC031;
+}
+
+.Review .cards_review .card_sm p{
+    text-align: center;
+    line-height: 22px;
+    margin-top: -20px;
+}
+.Review .cards_review .card_sm:hover p{
+   margin-top:-18px;
+}
+/*--OrderNow----------------------------------------------------------------*/
+.order-now{
+   padding: 70px 0;
+   width:100%;
+    margin-top:20px ;
+    
+}
+.order-now h2{
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.2;
+text-align: center;
+margin-bottom: 30px;
+}
+.order-now h2 span
+{
+   color: #faC031;
+   font-family: "MV Boli", cursive;
+    position: relative;    
+   display: inline-block;  
+   margin-right: 20px;
+ }
+ .order-now h2 span::after{
+   content: '';
+   width:100%;
+   height: 2px;
+   background-color: #faC031;
+    position: absolute;
+   left: 0;
+   bottom: -3px;       /* مكان الخط تحت الكلمة */
+      border-radius: 2px;
+
+}
+.order-now .content{
+   display:flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.order-now .content .img img{
+   width:600px;
+}
+.order-now .content form{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 0 10px ;
+}
+.order-now .content form .input-box {
+   margin: 5px;
+}
+ 
+.order-now .content form .input-box input{
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #cccccc;
+    outline: none;
+    border-radius: 3px;
+   background-color: #f5f5f5;  /* 👈 لون فاتح شوية */
+    font-size: 15px;             /* 👈 حجم الخط */
+    color: #333;                 /* 👈 لون الكتابة */
+    transition: 0.3s;            /* 👈 انتقال سلس */
+}
+.order-now .content form .input-box input:focus{
+   border: 2px solid #faC031;
+    background-color: #fff;      /* 👈 يبقى أبيض لما تكتبي */
+
+}
+.order-now .content form .input-box input::placeholder{
+    color: #999;                 /* لون رمادي فاتح */
+    font-size: 14px;
+}
+
+/* 👇 المسافات والتنظيم */
+.order-now .content form .input-box{
+    margin-bottom: 20px;         /* مسافة بين كل input */
+}
+
+.order-now .content form .input-box p{
+   display: block;
+     font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;          /* مسافة بين الـ label والـ input */
+    color: #333;
+ }
+.order-now .content a{
+   background-color: #faC031;
+   padding: 8px 20px;
+   color:white;
+   text-decoration: none;
+   text-align: center;
+   border-radius: 2px;
+   margin-top: 30px;
+   display: inline-block; /* ضيفي ده */
+   margin-left: 8px;
+
+}
+
+/*team*-----------------------------------------------------------------------------------------------*/
+.team{
+    width: 100%;
+    height: 90vh;
+    background-image: url(image/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.team h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    margin-bottom: 30px;
+}
+
+.team h2 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.team h2 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.team .team_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 13%;
+}
+
+.team .team_box .profile{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover{
+    border-radius: 20px;
+    height: 320px;
+}
+
+.team .team_box .profile img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    z-index: 2;
+    transition: 0.4s;
+}
+ 
+.team .team_box .profile:hover img{
+    border-radius: 20px;
+    margin-top: -230px;
+}
+
+.team .team_box .profile .info{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover .info{
+    top: 60%;
+}
+
+.team .team_box .profile .info .name{
+    color: #fac031;
+     font-size: 22px;
+     margin-top: -10px;
+
+}
+
+.team .team_box .profile .info .bio{
+    width: 70%;
+    text-align: center;
+    margin-left:  auto  ;
+    margin-right: auto;
+    margin-top: -20px;
+}
+
+.team .team_box .profile .info .team_icon i{
+    margin: 10px 5px 5px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team .team_box .profile .info .team_icon i:hover{
+    color: #fac031;
+}
+/*Footer----------------------------------------------------------------------------------------------------*/
+
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #eeeeee;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: #fac031;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer .end span{
+    color: #fac031;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #fac031;
+    border-radius: 15px;
+}
+/* تعريف الأنيميشن */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px); /* ارفعي أو قللي حسب الذوق */
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/*Responsive maxwidth:1200px--------------------------------------------------*/
+@media screen and (max-width: 1200px) {
+   /*menu*/
+   .photo-card {
+    width: 380px;
+    height: 260px;
+  }
+  .overlay-text p {
+    font-size: 13px;
+  }
+  .overlay-text p strong {
+    font-size: 24px;
+  }
+    /*review*/
+    .Review .cards_review .card_sm {
+    width: 30%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .Review .cards_review .card_sm .img-review img {
+    width:150px;
+    height:150px;
+  }
+  .Review h2 { font-size: 48px; }
+  .Review .cards_review .name h2 { font-size: 22px; }
+  /*order*/
+  .order-now .content .img img{
+    width:450px;
+  }
+  .order-now h2{
+    font-size: 50px;
+  }
+  .order-now .content form .input-box input{
+    width:250px;
+  }
+  /*team*/
+  .team{
+     height: auto;
+     padding: 60px 0;
+  }
+
+  .team .team_box{
+     flex-wrap: wrap;
+     top: 0;
+     gap: 25px;
+  }
+
+  .team .team_box .profile{
+     margin: 15px;
+  }
+
+}
+/*Responsive maxwidth:900px--------------------------------------------------*/
+@media (max-width:900px){
+   /*menubar*/
+  #menu-open-button{
+    display:block;
+    font-size:28px;
+    cursor:pointer;
+    background:none;
+    border:none;
+  }
+
+  .nav-items{
+    position:fixed;
+    left:-300px;
+    top:0;
+    width:300px;
+    height:100%;
+    padding-top:100px;
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    transition:.4s;
+    z-index:10001;
+  }
+
+  #menu-close-button{
+    display:block;
+    position:absolute;
+    top:30px;
+    right:30px;
+    font-size:25px;
+    background:none;
+    border:none;
+    cursor:pointer;
+  }
+
+  body.show-mobile-menu .nav-items{
+    left:0;
+  }
+
+  /* OVERLAY */
+  .overlay{
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(4px);
+    opacity:0;
+    pointer-events:none;
+    transition:.3s;
+    z-index:9999;
+  }
+
+  body.show-mobile-menu .overlay{
+    opacity:1;
+    pointer-events:auto;
+  }
+   .icons{
+    display: none;  
+  }
+    .logo img{
+    width: 90px;
+  }
+  /*main---*/
+  .hero_contant{
+    flex-direction: column; /* الصورة تنزل تحت الكلام */
+    text-align: center;  /* الكلام يبقى في النص */
+  }
+
+  .text-side{
+    margin-left: 0;      /* نشيل البعد عن الشمال */
+    margin-top: 20px;
+    align-items: center; /* خلي العناصر تتوسّط */
+  }
+.hero_contant .text-side_main .title h1{  /* 👈 غيري h1 لـ h2 */
+    font-size: 40px;   /* وحطي نفس الحجم */
+  }
+
+  .text-block p{
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 90%;
+  }
+
+  .btn_icon{
+    margin: auto;      /* علشان يتوسّط */
+    margin-top: 10px;
+  }
+
+  .hero_contant .img{
+    max-width: 75%;  /* الصورة تصغر شوية */
+    margin-top: 30px;
+  }
+  /*about*/
+  .container_about .img{
+    width: 55%;
+  }
+
+  .about-details{
+    width: 55%;
+    text-align: center; /* يظبط النص */
+  }
+
+  .about-details h2{
+    font-size: 45px;
+  }
+  
+  .about-details p {
+    font-size: 16px;  /* حجم معقول */
+    line-height: 1.8; /* مسافة بين السطور */
+    word-wrap: break-word;
+    white-space: normal;
+    padding: 0 20px;
+    text-align: justify; /* توزيع الكلام بشكل متساوي */
+    margin-bottom: 40px; /* مسافة قبل الزر */
+  }
+  
+  .about-details h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+/*menu*/
+Menu {
+        padding: 90px 0; /* زيادة المسافة العلوية والسفلية */
+    }
+.Menu .menu_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /*gallery*/
+    .Photos_section .title {
+    font-size: 45px;
+  }
+
+  .photo_part1,
+  .photo_part2 {
+    gap: 20px;
+  }
+
+  .photo-card {
+    width: 300px;
+    height: 220px;
+  }
+
+  .overlay-text p strong {
+    font-size: 22px;
+  }
+
+  .overlay-text a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+        
+        /*review*/
+    .Review .cards_review {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .Review .cards_review .card_sm {
+    width: 45%;
+    height: auto;
+  }
+  .Review .cards_review .card_sm .img-review img {
+    width:140px;
+    height:140px;
+  }
+  .Review .cards_review .name h2 { font-size: 20px; }
+  .Review .cards_review .rate i { font-size: 13px; }
+  .Review .cards_review .card_sm p { font-size: 14px; }
+  /*orderNow*/
+  .order-now{
+    height: auto; /* مهم جداً */
+    padding-bottom: 40px;
+  }
+
+  .order-now .content{
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .order-now .content .img img{
+    width:350px;
+  }
+
+  .order-now .content form{
+    grid-template-columns: 1fr; /* صف واحد */
+  }
+
+  .order-now .content form .input-box input{
+    width:100%; /* يمتد */
+  }
+  /*team*/
+  .team h2{
+     font-size: 45px;
+  }
+
+  .team .team_box .profile{
+     width: 260px;
+     height: 260px;
+  }
+
+  .team .team_box .profile img{
+     width: 200px;
+     height: 200px;
+  }
+
+  .team .team_box .profile:hover img{
+     margin-top: -180px;
+  }
+
+  .team .team_box .profile .info{
+     top: 22%;
+  }
+
+  .team .team_box .profile:hover .info{
+     top: 55%;
+  }
+}
+/*Responsive maxwidth:768px--------------------------------------------------*/
+@media (max-width: 768px) {
+   /*main-contect*/
+   .hero_contant{
+    flex-direction: column; /* ينزلوا تحت بعض */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .text-side{
+    margin-left: 0;      /* شيل البعد */
+    align-items: center; /* خلي الكلام في النص */
+    max-width: 90%;
+  }
+
+  .hero_contant .title h1{
+    font-size: 38px;     /* مناسب للموبايل */
+    line-height: 1.3;
+  }
+
+  .text-block p{
+    font-size: 15px;
+    max-width: 95%;
+  }
+
+  .main_content .btn_icon{
+    margin: 0 auto;  /* توسيط الزر */
+    margin-top: 8px;
+  }
+
+  .hero_contant .img{
+    max-width: 80%;   /* الصورة تصغر بشكل متوازن */
+    margin-top: 20px;
+  }
+  /*about*/
+  .container_about{
+    flex-direction: column; /* ينزلوا تحت بعض */
+    text-align: center;
+  }
+
+  .container_about .img,
+  .about-details{
+    width: 90%;
+  }
+
+  .about-details h2{
+    font-size: 35px;
+  }
+  
+  .about-details h3{
+    font-size: 25px;
+  }
+   .about-details p {
+    font-size: 15px;
+    line-height: 1.7;
+    word-wrap: break-word;
+    white-space: normal;
+    padding: 0 15px;
+    text-align: justify;
+    margin-bottom: 35px;
+    max-width: 100%; /* مهم جداً */
+  }
+   /*menu*/ 
+   /* أضيفي دي في البداية */
+  .main_content {
+    padding-top: 90px; /* تقليل المسافة من فوق */
+  }
+
+  .about {
+    padding: 40px 0; /* تقليل الـ padding */
+    height: auto; /* السماح للقسم بالتمدد حسب المحتوى */
+  }
+ .Menu {
+    padding-top: 100px; /* زياده المسافة من الأعلى */
+    padding-bottom: 50px;
+  }
+   .Menu .menu_cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .Menu h2 {
+        font-size: 40px; /* تصغير العنوان */
+    }
+
+    .Menu .menu_cards .card_sm {
+        height: auto; /* يسمح للكارد بالتمدد حسب المحتوى */
+    }
+
+    .Menu .menu_cards .card_sm .img {
+        height: 180px; /* تصغير الصورة على الموبايل */
+    }
+
+    .Menu .menu_cards .card_sm .content h2 {
+        font-size: 20px; /* تصغير اسم المنتج */
+    }
+
+    .Menu .menu_cards .card_sm .content p {
+        font-size: 14px; /* تصغير الوصف */
+    }
+
+    .Menu .menu_cards .card_sm .content h3 {
+        font-size: 18px; /* تصغير السعر */
+    }
+    /*galler*/
+      .Photos_section {
+    padding: 40px 0 60px;
+  }
+
+  .Photos_section .title {
+    font-size: 40px;
+  }
+
+  .photo-card {
+    width: 85%;
+    height: 240px;
+  }
+
+  .overlay-text p {
+    font-size: 13px;
+  }
+
+  .overlay-text p strong {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .overlay-text a {
+    padding: 8px 14px;
+    font-size: 15px;
+  }
+     /*Review*/
+  .Review {
+    height: auto; /* 👈 مهم جداً */
+    padding: 40px 0 50px; /* 👈 زودي المسافة من تحت */
+  }
+  
+  .Review h2 { font-size: 42px; }
+  
+  .Review .cards_review .card_sm {
+    width: 90%;
+  }
+  
+  .Review .cards_review .card_sm .img-review img {
+    width:130px; 
+    height:130px;
+  }
+  
+  .Review .cards_review .name h2 { font-size: 19px; }
+  .Review .cards_review .rate i { font-size: 12px; }
+  .Review .cards_review .icon-social i { font-size: 14px; }
+  
+  /*order now*/
+  .order-now {
+    padding-top: 30px; /* 👈 زودي المسافة من فوق */
+    padding-bottom: 60px;
+   }
+  
+  .order-now h2 {
+    font-size: 42px;
+    margin-bottom: 40px; /* 👈 مسافة تحت العنوان */
+  }
+  
+  .order-now .content .img img {
+    width: 300px;
+  }
+  
+  .order-now .content {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .order-now .content a {
+    margin: 20px auto 0;
+    display: block;
+    width: fit-content;
+  }
+  /*team*/
+   .team{
+        height: auto;
+        padding: 70px 0;
+    }
+
+    .team .team_box{
+        flex-wrap: wrap;
+        gap: 40px;
+        top: 0;
+    }
+
+    .team .team_box .profile{
+        width: 260px;
+        height: 260px;
+    }
+
+    .team .team_box .profile img{
+        width: 200px;
+        height: 200px;
+    }
+
+.team .team_box .profile .info{
+    position: absolute;
+    text-align: center;
+    top: 85%;          /* 👈 نزلنا الكلام تحت الصورة بالكامل */
+    z-index: 1;        /* 👈 يبقى خلف الصورة قبل الهوفر */
+    opacity: 0;        /* 👈 مخفي قبل الهوفر */
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover .info{
+    top: 60%;          /* 👈 يبدأ يظهر من تحت */
+    opacity: 1;        /* 👈 يظهر بوضوح */
+    z-index: 5;        /* 👈 يطلع فوق الصورة */
+}
+
+
+    
+
+    .team .team_box .profile .info .name{
+        font-size: 20px;
+    }
+
+    .team .team_box .profile .info .bio{
+        width: 80%;
+        margin-top: -10px;
+        font-size: 14px;
+    }
+}
+
+/*Responsive maxwidth:500px--------------------------------------------------*/
+@media (max-width: 500px){
+   /*main-hero*/
+  .hero_contant .title h1{
+    font-size: 34px;
+  }
+  .text-block p{
+    font-size: 14px;
+  }
+  .container_about .img{
+    width: 100%;
+  }
+/*about*/
+  .about-details{
+    width: 100%;
+  }
+
+   .about-details p {
+    font-size: 14px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    white-space: normal;
+    padding: 0 15px;
+    text-align: justify; /* أو center حسب رغبتك */
+    margin-bottom: 30px;
+  }
+
+  .about-details h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .about-details h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  /*menu*/
+  .main_content {
+    padding-top: 80px; /* أقل شوية للشاشات الصغيرة جداً */
+  }
+
+  .about {
+    padding: 30px 0;
+    height: auto;
+  }
+
+  .Menu {
+        padding: 50px 0; /* زيادة المسافة العلوية والسفلية */
+    }
+  .Menu h2 {
+        font-size: 30px; /* تصغير عنوان السيكشن */
+    }
+
+    .Menu .menu_cards {
+        grid-template-columns: 1fr; /* كارد واحد في الصف */
+        grid-gap: 10px; /* تقليل المسافة بين الكاردز */
+        width: 90%; /* توسيع الشبكة قليلاً لتناسب الموبايل */
+    }
+
+    .Menu .menu_cards .card_sm {
+        height: auto; /* يسمح للكارد بالتمدد حسب المحتوى */
+        padding: 5px 10px;
+        margin-bottom: 15px; /* كفاية لمنع التصاقه */
+    }
+
+    .Menu .menu_cards .card_sm .img {
+        height: 150px; /* تصغير الصورة على الموبايل */
+    }
+
+    .Menu .menu_cards .card_sm .content h2 {
+        font-size: 18px; /* تصغير اسم المنتج */
+    }
+
+    .Menu .menu_cards .card_sm .content p {
+        font-size: 13px; /* تصغير الوصف */
+    }
+
+    .Menu .menu_cards .card_sm .content h3 {
+        font-size: 16px; /* تصغير السعر */
+    }
+
+    .Menu .menu_cards .card_sm .content a {
+        padding: 6px 15px; /* تصغير الزر */
+        font-size: 14px;
+    }
+
+    .Menu .menu_cards .card_sm .icon_heart {
+        top: 5px;  /* ضبط موقع الأيقونة */
+        right: 5px;
+        font-size: 18px;
+    }
+    /*gallery*/
+    .Photos_section .title {
+    font-size: 34px;
+  }
+
+  .photo-card {
+    width: 95%;
+    height: 200px;
+  }
+
+  .overlay-text {
+    padding: 10px;
+  }
+
+  .overlay-text p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .overlay-text p strong {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .overlay-text a {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+    /*review*/
+     .Review {
+    padding: 40px 0;
+  }
+  .Review h2 { font-size: 35px; }
+  .Review .cards_review {
+    margin-top: 30px;
+  }
+  .Review .cards_review .card_sm {
+    width: 95%;
+    padding: 15px;
+  }
+  .Review .cards_review .card_sm .img-review img {
+    width:110px; height:110px;
+  }
+  .Review .cards_review .name h2 { font-size: 18px; }
+  .Review .cards_review .rate i { font-size: 11px; }
+  .Review .cards_review .card_sm p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+   /*review*/
+  .Review {
+    padding: 40px 0 10px; /* 👈 مسافة أكبر من تحت */
+    height: auto;
+  }
+  
+  /*order now*/
+  .order-now {
+    padding-top: 30px; /* 👈 مسافة كبيرة من فوق */
+   }
+  
+  .order-now h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  /*team*/
+     .team{
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .team .team_box{
+        flex-direction: column;
+        top: 0;
+        gap: 25px;
+    }
+
+    .team .team_box .profile{
+        width: 250px;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .team .team_box .profile img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+
+    /* ❗ منع الحركة اللي كانت بتبوز الشكل في الموبايل */
+    .team .team_box .profile:hover{
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .team .team_box .profile:hover img{
+        margin-top: 0;
+        border-radius: 50%;
+    }
+
+    .team .team_box .profile:hover .info{
+        top: auto;
+    }
+
+    .team .team_box .profile .info{
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .team .team_box .profile .info .bio{
+        width: 90%;
+    }
+}
+
+ /*footer---------------------------------------------------*/
+ /* 1200px */
+@media (max-width:1200px){
+    footer .footer_main{
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 أعمدة بدل 5 */
+    }
+}
+
+/* 900px */
+@media (max-width:900px){
+    footer .footer_main{
+        grid-template-columns: 1fr 1fr 1fr; /* 3 أعمدة */
+        gap: 20px;
+    }
+}
+
+/* 768px (تابلت) */
+@media (max-width:768px){
+    footer .footer_main{
+        grid-template-columns: 1fr 1fr; /* عمودين */
+        gap: 25px;
+    }
+
+    footer .footer_main .footer_tag h2{
+        font-size: 24px;
+    }
+}
+
+/* 500px (موبايل) */
+@media (max-width:500px){
+    footer .footer_main{
+        grid-template-columns: 1fr; /* عمود واحد */
+        text-align: center;
+    }
+
+    footer{
+        padding-left: 0;
+    }
+}
+ 
