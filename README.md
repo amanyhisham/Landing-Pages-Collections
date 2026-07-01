@@ -1,14 +1,14 @@
 # 🎨 Landing Pages Collections
 
-مجموعة متنوعة من صفحات الهبوط (Landing Pages) وتصاميم الواجهات الأمامية، تم تنفيذها باستخدام **HTML5, CSS3, JavaScript, Bootstrap, و Tailwind CSS**.
-الريبو ده بيضم مشاريع تدريبية وتطبيقية مختلفة زي: صفحات مطاعم، متاجر إلكترونية، بورتفوليو شخصي، وواجهات UI متنوعة، وكل مشروع منشور Live على Vercel علشان تقدر تشوفه مباشرة من غير ما تحمّل أي حاجة.
+A collection of various landing pages and front-end designs, built using **HTML5, CSS3, JavaScript, Bootstrap, and Tailwind CSS**.
+This repository includes multiple training and practical projects such as: restaurant pages, e-commerce stores, a personal portfolio, and various UI components. Each project is live on Vercel so you can view it directly without downloading anything.
 
 ---
 
 ## 🔗 Demo Links
 
-| # | المشروع | الرابط |
-|---|---------|--------|
+| # | Project | Link |
+|---|---------|------|
 | 1 | Avater Page | [Live Demo](https://landing-pages-collections.vercel.app/) |
 | 2 | BakeryWeb By BootStrap | [Live Demo](https://landing-pages-collections-31pi.vercel.app/) |
 | 3 | CSS_Question_Interview | [Live Demo](https://landing-pages-collections-d48e.vercel.app/) |
@@ -24,10 +24,10 @@
 | 13 | Templet2 ElZero 2024 | [Live Demo](https://landing-pages-collections-w94a.vercel.app/) |
 | 14 | iphone_page | [Live Demo](https://landing-pages-collections-rclf.vercel.app/) |
 
-### 🧩 UI-Components (يحتوي على 3 صفحات فرعية)
+### 🧩 UI-Components (contains 3 sub-pages)
 
-| # | الصفحة | الرابط |
-|---|--------|--------|
+| # | Page | Link |
+|---|------|------|
 | 1 | Card UI | [Live Demo](https://landing-pages-collections-4w18.vercel.app/) |
 | 2 | Card UI | [Live Demo](https://landing-pages-collections-342z.vercel.app/) |
 | 3 | Card UI | [Live Demo](https://landing-pages-collections-y1ly.vercel.app/) |
