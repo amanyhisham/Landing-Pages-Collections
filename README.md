@@ -34,7 +34,7 @@ This repository includes multiple training and practical projects such as: resta
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack:
 
 - HTML5
 - CSS3
